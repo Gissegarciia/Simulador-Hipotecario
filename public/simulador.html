@@ -30,61 +30,30 @@ details>summary::-webkit-details-marker{display:none;}
 .inp{width:100%;border:1px solid #d1d5db;border-radius:.5rem;padding:.45rem .65rem;font-size:.85rem;transition:border-color .2s,box-shadow .2s;}
 .inp:focus{outline:none;border-color:#1a4a7a;box-shadow:0 0 0 3px rgba(26,74,122,.13);}
 .abs-pre{position:absolute;left:.65rem;top:.5rem;color:#9ca3af;font-size:.85rem;}
-@media(max-width:640px){
-  .hide-mobile{display:none!important;}
-  .grid-cols-4{grid-template-columns:repeat(2,1fr)!important;}
-  .text-3xl{font-size:1.5rem!important;}
-}
-@media print{
-  .no-print{display:none!important;}
-  body{background:#fff;}
-  .card{box-shadow:none;}
-  .watermark{display:none;}
-}
+@media(max-width:640px){.grid-cols-4{grid-template-columns:repeat(2,1fr)!important;}}
+@media print{.no-print{display:none!important;}body{background:#fff;}.card{box-shadow:none;}.watermark{display:none;}}
 </style>
 </head>
 <body>
-
 <div class="watermark">© Colibran 2026 · Propiedad Intelectual · Uso Interno · Prohibida reproducción</div>
 
-<!-- ═══ HEADER ═══ -->
+<!-- HEADER -->
 <div class="grad text-white py-4 px-4 no-print">
   <div class="max-w-4xl mx-auto flex items-center justify-between gap-3 flex-wrap">
     <div class="flex items-center gap-3">
-      <!-- Logo Colibran (base64 SVG placeholder — reemplaza src con imagen real) -->
-      <img src="https://i.imgur.com/placeholder.png"
-           onerror="this.style.display='none';document.getElementById('logo_text').style.display='flex';"
-           alt="Colibran" class="h-10 w-auto" id="logo_img"/>
-      <div id="logo_text" style="display:none;" class="items-center gap-2 flex">
-        <svg viewBox="0 0 40 40" class="w-9 h-9" fill="none">
-          <ellipse cx="20" cy="14" rx="10" ry="12" fill="#0e7490" opacity=".85"/>
-          <ellipse cx="14" cy="22" rx="7" ry="9" fill="#0891b2" opacity=".7" transform="rotate(-30 14 22)"/>
-          <ellipse cx="26" cy="22" rx="5" ry="8" fill="#22d3ee" opacity=".6" transform="rotate(20 26 22)"/>
-          <circle cx="20" cy="10" r="2.5" fill="#f59e0b"/>
-        </svg>
-        <div>
-          <p class="font-extrabold text-lg leading-none tracking-tight">COLIBRAN</p>
-          <p class="text-blue-300 text-xs">Soluciones Financieras</p>
-        </div>
-      </div>
-      <!-- Logo real inyectado -->
-      <div id="logo_real" class="hidden">
-        <div class="flex items-center gap-2">
-          <div class="colibran-bird">
-            <!-- SVG colibrí simplificado en teal/verde -->
-            <svg viewBox="0 0 50 45" class="w-10 h-10" fill="none">
-              <path d="M25 5 C18 8 10 15 8 25 C12 20 18 18 22 20 C20 15 22 10 25 5Z" fill="#0e7490"/>
-              <path d="M25 5 C32 8 40 15 42 25 C38 20 32 18 28 20 C30 15 28 10 25 5Z" fill="#0891b2"/>
-              <path d="M22 20 C18 22 14 28 12 35 C16 30 20 27 25 26 C20 25 20 22 22 20Z" fill="#22d3ee" opacity=".8"/>
-              <path d="M28 20 C32 22 36 28 38 35 C34 30 30 27 25 26 C30 25 30 22 28 20Z" fill="#0e7490" opacity=".7"/>
-              <ellipse cx="25" cy="8" rx="2" ry="3" fill="#f59e0b"/>
-            </svg>
-          </div>
-          <div>
-            <p class="font-extrabold text-xl tracking-wider leading-none">COLIBRAN</p>
-            <p class="text-blue-300 text-xs">Crédito de Vivienda</p>
-          </div>
-        </div>
+      <!-- Colibrí SVG -->
+      <svg viewBox="0 0 60 55" class="w-12 h-12 shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 6 C22 10 12 20 10 32 C15 25 22 22 27 24 C24 18 26 12 30 6Z" fill="#0e7490"/>
+        <path d="M30 6 C38 10 48 20 50 32 C45 25 38 22 33 24 C36 18 34 12 30 6Z" fill="#0891b2"/>
+        <path d="M27 24 C21 27 15 34 12 43 C17 37 23 33 30 32 C24 31 24 27 27 24Z" fill="#22d3ee" opacity=".85"/>
+        <path d="M33 24 C39 27 45 34 48 43 C43 37 37 33 30 32 C36 31 36 27 33 24Z" fill="#0e7490" opacity=".75"/>
+        <ellipse cx="30" cy="9" rx="2.5" ry="3.5" fill="#f59e0b"/>
+        <path d="M30 6 L8 14" stroke="#22d3ee" stroke-width="1" stroke-linecap="round" opacity=".5"/>
+      </svg>
+      <div>
+        <p class="font-extrabold text-xl tracking-widest leading-none">COLIBRAN</p>
+        <p class="text-blue-200 text-xs leading-tight">Simulador de Crédito de Vivienda · Mayo 2026</p>
+        <p class="text-blue-300 text-xs leading-tight">Actualizado: 15 de mayo de 2026</p>
       </div>
     </div>
     <a href="https://wa.me/573004383623?text=Hola,%20quiero%20asesoría%20en%20crédito%20de%20vivienda%20con%20Colibran"
@@ -100,7 +69,7 @@ details>summary::-webkit-details-marker{display:none;}
 
 <div class="max-w-4xl mx-auto px-3 sm:px-4 py-5 space-y-4">
 
-<!-- ═══ PASO 1: FORMULARIO BÁSICO ═══ -->
+<!-- PASO 1 FORMULARIO -->
 <div class="card no-print" id="paso1">
   <h2 class="text-sm font-bold text-gray-800 mb-4 flex items-center gap-2">
     <span class="step-dot">1</span> Datos del Trámite
@@ -123,7 +92,8 @@ details>summary::-webkit-details-marker{display:none;}
         <option value="150">Barranquilla / Área Metropolitana</option>
         <option value="150">Bucaramanga</option>
         <option value="150">Cartagena</option>
-        <option value="135">Otra ciudad / municipio</option></select>
+        <option value="135">Otra ciudad / municipio</option>
+      </select>
       <p id="tope_vis_label" class="text-xs text-blue-600 mt-1 hidden"></p></div>
 
     <div><label class="lbl">Tipo de Perfil <span class="text-red-500">*</span></label>
@@ -134,25 +104,27 @@ details>summary::-webkit-details-marker{display:none;}
         <option value="independiente">Independiente</option>
         <option value="rentista">Rentista de Capital</option>
         <option value="transportador">Transportador</option>
-        <option value="pensionado">Pensionado</option></select></div>
+        <option value="pensionado">Pensionado</option>
+      </select></div>
 
     <div><label class="lbl">Tipo de Trámite <span class="text-red-500">*</span></label>
       <select id="f_tramite" class="inp bg-white">
         <option value="">-- Seleccionar --</option>
         <option value="compra_vivienda">Compra de Vivienda</option>
         <option value="leasing">Leasing Habitacional</option>
-        <option value="compra_cartera">Compra de Cartera</option></select></div>
+        <option value="compra_cartera">Compra de Cartera</option>
+      </select></div>
 
-    <div id="box_tipo_viv" class="hidden">
-      <label class="lbl">¿Vivienda Nueva o Usada? <span class="text-red-500">*</span></label>
+    <!-- Solo compra vivienda -->
+    <div id="box_tipo_viv" class="hidden"><label class="lbl">¿Vivienda Nueva o Usada? <span class="text-red-500">*</span></label>
       <select id="f_tipo_viv" class="inp bg-white">
         <option value="">-- Seleccionar --</option>
         <option value="nueva">Nueva</option>
-        <option value="usada">Usada</option></select></div>
+        <option value="usada">Usada</option>
+      </select></div>
 
-    <!-- BANCO ACTUAL (solo compra de cartera) -->
-    <div id="box_banco_origen" class="hidden">
-      <label class="lbl">Banco con el que tiene la cartera actualmente <span class="text-red-500">*</span></label>
+    <!-- Solo compra cartera -->
+    <div id="box_banco_origen" class="hidden"><label class="lbl">Banco con el que tiene la cartera actualmente <span class="text-red-500">*</span></label>
       <select id="f_banco_origen" class="inp bg-white">
         <option value="">-- Seleccionar --</option>
         <option value="av_villas">Banco AV Villas</option>
@@ -164,57 +136,52 @@ details>summary::-webkit-details-marker{display:none;}
         <option value="bancolombia">Bancolombia</option>
         <option value="caja_social">Banco Caja Social</option>
         <option value="davivienda">Davivienda</option>
-        <option value="otro">Otro banco</option></select></div>
+        <option value="otro">Otro banco</option>
+      </select></div>
 
-    <div id="box_tasa_actual" class="hidden">
-      <label class="lbl">Tasa actual del crédito (% E.A.)</label>
+    <div id="box_tasa_actual" class="hidden"><label class="lbl">Tasa actual del crédito (% E.A.)</label>
       <input id="f_tasa_actual" type="number" step="0.01" placeholder="Ej: 16.5" class="inp"/>
       <p class="text-xs text-gray-400 mt-1">Para calcular el ahorro total del traslado.</p></div>
 
-    <div id="box_plazo_restante" class="hidden">
-      <label class="lbl">Plazo restante del crédito actual (meses)</label>
+    <div id="box_plazo_restante" class="hidden"><label class="lbl">Plazo restante del crédito actual (meses)</label>
       <input id="f_plazo_restante" type="number" placeholder="Ej: 180" class="inp"/></div>
 
     <div><label class="lbl">Ingresos Brutos Mensuales <span class="text-red-500">*</span></label>
       <div class="relative"><span class="abs-pre">$</span>
-        <input id="f_ingresos" type="number" placeholder="5000000" class="inp pl-6"/></div>
+        <input id="f_ingresos" type="number" placeholder="5.000.000" class="inp pl-6" oninput="fmtInput(this)"/></div>
       <p id="smlv_label" class="text-xs text-blue-600 mt-1"></p></div>
 
+    <!-- Valor inmueble / valor comercial -->
     <div><label id="lbl_valor" class="lbl">Valor del Inmueble <span class="text-red-500">*</span></label>
       <div class="relative"><span class="abs-pre">$</span>
-        <input id="f_valor" type="number" placeholder="200000000" class="inp pl-6"/></div>
-      <p id="hint_valor" class="text-xs text-gray-400 mt-1">Se calcula el 80% (o 90% leasing) automáticamente.</p></div>
+        <input id="f_valor" type="number" placeholder="200.000.000" class="inp pl-6" oninput="fmtInput(this)"/></div>
+      <p id="hint_valor" class="text-xs text-gray-400 mt-1">Se calculará el 70% automáticamente como monto a financiar.</p></div>
 
     <div><label class="lbl">Monto a Financiar <span class="text-red-500">*</span></label>
       <div class="relative"><span class="abs-pre">$</span>
-        <input id="f_monto" type="number" placeholder="160000000" class="inp pl-6 bg-blue-50"/></div>
-      <p class="text-xs text-gray-400 mt-1">Calculado automático (editable si necesitas ajustar).</p></div>
+        <input id="f_monto" type="number" placeholder="140.000.000" class="inp pl-6 bg-blue-50" oninput="fmtInput(this)"/></div>
+      <p class="text-xs text-gray-400 mt-1">Calculado en 70% automático (editable).</p></div>
 
     <div><label class="lbl">Plazo deseado (años) <span class="text-red-500">*</span></label>
       <input id="f_plazo" type="number" placeholder="15" min="5" max="30" class="inp"/>
       <p id="hint_plazo" class="text-xs text-gray-400 mt-1">Hipotecario: 5–20 años · Leasing: hasta 30 años.</p></div>
 
-    <div id="box_vehiculo" class="hidden">
-      <label class="lbl">Antigüedad del Vehículo (años)</label>
+    <div id="box_vehiculo" class="hidden"><label class="lbl">Antigüedad del Vehículo (años)</label>
       <input id="f_vehiculo" type="number" placeholder="5" min="0" class="inp"/></div>
 
     <div class="sm:col-span-2 lg:col-span-3">
       <label class="lbl font-semibold">¿El cliente tiene reportes negativos o moras vigentes? <span class="text-red-500">*</span></label>
       <div class="flex gap-6 mt-1">
-        <label class="flex items-center gap-2 text-sm cursor-pointer">
-          <input type="radio" name="moras" value="no" class="accent-blue-900"> No, historial limpio</label>
-        <label class="flex items-center gap-2 text-sm cursor-pointer">
-          <input type="radio" name="moras" value="si" class="accent-red-500"> Sí, tiene moras o reportes</label>
-      </div>
-    </div>
+        <label class="flex items-center gap-2 text-sm cursor-pointer"><input type="radio" name="moras" value="no" class="accent-blue-900"> No, historial limpio</label>
+        <label class="flex items-center gap-2 text-sm cursor-pointer"><input type="radio" name="moras" value="si" class="accent-red-500"> Sí, tiene moras o reportes</label>
+      </div></div>
 
-    <div class="sm:col-span-2 lg:col-span-3">
-      <label class="lbl">Empresa / Entidad donde labora</label>
+    <div class="sm:col-span-2 lg:col-span-3"><label class="lbl">Empresa / Entidad donde labora</label>
       <input id="f_empresa" type="text" placeholder="Ej: Alcaldía de Bogotá" class="inp"/></div>
 
   </div>
 
-  <!-- Preview DTI -->
+  <!-- DTI Preview -->
   <div id="dti_preview" class="hidden mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
     <p class="text-xs font-bold text-slate-700 mb-2">📊 Indicador de Capacidad en Tiempo Real</p>
     <div id="dti_texto" class="text-xs text-slate-600 mb-2"></div>
@@ -222,7 +189,7 @@ details>summary::-webkit-details-marker{display:none;}
       <div class="flex-1 bg-gray-200 rounded-full h-2.5">
         <div id="dti_barra" class="progress-bar bg-green-500" style="width:0%"></div>
       </div>
-      <span id="dti_pct" class="text-xs font-bold w-12 text-right shrink-0"></span>
+      <span id="dti_pct" class="text-xs font-bold w-14 text-right shrink-0"></span>
     </div>
     <p id="dti_msg" class="text-xs mt-2 font-medium"></p>
   </div>
@@ -233,113 +200,102 @@ details>summary::-webkit-details-marker{display:none;}
   </button>
 </div>
 
-<!-- ═══ RESULTADO ═══ -->
+<!-- RESULTADO -->
 <div id="resultado" class="hidden"></div>
 
-<!-- ═══ PASO 2: DATOS PERSONALES (solo si acepta oferta) ═══ -->
+<!-- PASO 2: DATOS PERSONALES -->
 <div id="paso2" class="hidden card no-print">
   <h2 class="text-sm font-bold text-gray-800 mb-1 flex items-center gap-2">
     <span class="step-dot">2</span> ¿El cliente desea continuar con la oferta?
   </h2>
-  <p class="text-xs text-gray-500 mb-4">Solo si el cliente acepta, registra sus datos de contacto para el seguimiento. <strong>Tratamiento de datos personales bajo Ley 1581.</strong></p>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+  <p class="text-xs text-gray-500 mb-4">Solo si acepta, registra sus datos. Tratamiento de datos personales bajo <strong>Ley 1581 de 2012</strong>.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
     <div><label class="lbl">Tipo de documento <span class="text-red-500">*</span></label>
       <select id="f_tipo_doc" class="inp bg-white">
         <option value="">-- Seleccionar --</option>
         <option>Cédula de Ciudadanía</option>
         <option>Cédula de Extranjería</option>
-        <option>NIT</option>
-        <option>Pasaporte</option></select></div>
+        <option>Pasaporte</option>
+      </select></div>
     <div><label class="lbl">Número de documento <span class="text-red-500">*</span></label>
       <input id="f_doc" type="text" placeholder="123456789" class="inp"/></div>
     <div><label class="lbl">Celular <span class="text-red-500">*</span></label>
       <input id="f_celular" type="tel" placeholder="300 000 0000" class="inp"/></div>
   </div>
   <div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800">
-    <strong>Autorización:</strong> Al registrar los datos el cliente autoriza a Colibran el tratamiento de sus datos personales con fines exclusivos de asesoría en crédito de vivienda, conforme a la Ley 1581 de 2012.
+    <strong>Autorización:</strong> Al registrar sus datos el titular autoriza a Colibran el tratamiento de sus datos personales con fines exclusivos de asesoría en crédito de vivienda, conforme a la Ley 1581 de 2012.
   </div>
   <div class="flex gap-3 mt-4 flex-wrap">
-    <button onclick="aceptarOferta()"
-      class="flex-1 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl text-sm transition shadow">
-      ✅ Cliente acepta — Guardar y continuar
-    </button>
-    <button onclick="rechazarOferta()"
-      class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-3 rounded-xl text-sm transition">
-      ❌ Cliente no continúa
-    </button>
+    <button onclick="aceptarOferta()" class="flex-1 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl text-sm transition shadow">✅ Cliente acepta — Registrar y continuar</button>
+    <button onclick="rechazarOferta()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-3 rounded-xl text-sm transition">❌ Cliente no continúa</button>
   </div>
 </div>
 
-<!-- ═══ BOTONES FINALES ═══ -->
+<!-- BOTONES -->
 <div id="btns_accion" class="hidden no-print space-y-2">
-  <button onclick="window.print()"
-    class="w-full border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-semibold py-3 rounded-xl text-sm transition">
-    🖨️ Imprimir / Guardar diagnóstico como PDF
-  </button>
+  <button onclick="window.print()" class="w-full border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-semibold py-3 rounded-xl text-sm transition">🖨️ Imprimir / Guardar como PDF</button>
 </div>
 
-</div><!-- /container -->
+</div>
 
 <script>
-// ════════════════════════════════════════════════
-// EXPIRACIÓN — la herramienta expira el 31/12/2026
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// CONFIGURACIÓN GOOGLE SHEETS
+// Pega aquí la URL de tu Google Apps Script Web App
+// ══════════════════════════════════════════════════
+const SHEETS_URL = 'PEGA_AQUI_LA_URL_DE_TU_APPS_SCRIPT';
+
+// ══════════════════════════════════════════════════
+// EXPIRACIÓN
+// ══════════════════════════════════════════════════
 (function(){
-  const EXP = new Date('2026-12-31T23:59:59');
-  if(new Date() > EXP){
-    document.body.innerHTML = `
-    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#0f2744;color:#fff;padding:2rem;text-align:center;">
-      <svg viewBox="0 0 50 45" style="width:60px;height:60px;margin-bottom:1rem;" fill="none">
-        <ellipse cx="20" cy="14" rx="10" ry="12" fill="#0e7490" opacity=".85"/>
-        <ellipse cx="14" cy="22" rx="7" ry="9" fill="#0891b2" opacity=".7" transform="rotate(-30 14 22)"/>
-        <circle cx="20" cy="10" r="2.5" fill="#f59e0b"/>
-      </svg>
-      <h1 style="font-size:1.5rem;font-weight:800;margin-bottom:.5rem;">COLIBRAN</h1>
-      <h2 style="font-size:1.1rem;color:#f59e0b;margin-bottom:1rem;">Herramienta Expirada</h2>
-      <p style="color:#93c5fd;max-width:400px;font-size:.9rem;">Esta versión del simulador expiró el 31 de diciembre de 2026.<br>Contacta al equipo Colibran para obtener la versión actualizada.</p>
+  if(new Date() > new Date('2026-12-31T23:59:59')){
+    document.body.innerHTML=`<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;background:#0f2744;color:#fff;padding:2rem;text-align:center;">
+      <p style="font-size:2rem;font-weight:800;letter-spacing:.1em;">COLIBRAN</p>
+      <p style="color:#f59e0b;font-size:1.1rem;margin:.5rem 0;">Herramienta Expirada</p>
+      <p style="color:#93c5fd;max-width:380px;font-size:.9rem;">Esta versión expiró el 31 de diciembre de 2026. Contacta al equipo Colibran para la versión actualizada.</p>
       <a href="https://wa.me/573004383623" style="margin-top:1.5rem;background:#22c55e;color:#fff;padding:.75rem 2rem;border-radius:1rem;font-weight:700;text-decoration:none;">💬 Contactar Colibran</a>
-      <p style="margin-top:2rem;font-size:.6rem;color:#475569;">© Colibran 2026 · Propiedad Intelectual · Uso Interno</p>
+      <p style="margin-top:2rem;font-size:.6rem;color:#475569;">© Colibran 2026 · Propiedad Intelectual</p>
     </div>`;
   }
 })();
 
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 // CONSTANTES
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 const SMLV = 1750905;
 const UVR  = 3.85;
+const LTV_AUTO = 0.70; // 70% automático para no descartar bancos
 
 function topeVIS(f){ return Math.round(SMLV * f); }
 
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 // TASAS MÍNIMAS — Superfinanciera Mayo 2026
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 const T = {
-  hip_pesos:     { caja_social:{vis:13.40,novis:14.10}, av_villas:{vis:11.90,novis:12.40}, bbva:{vis:14.00,novis:15.50}, bogota:{vis:13.22,novis:14.03}, occidente:{vis:14.67,novis:14.67}, itau:{vis:null,novis:13.57}, credifamilia:{vis:15.99,novis:15.99}, bancolombia:{vis:12.20,novis:12.60} },
-  hip_uvr:       { caja_social:{vis:6.90,novis:7.40},  av_villas:{vis:8.20,novis:8.40},  bbva:{vis:6.95,novis:7.90},  bogota:{vis:7.44,novis:8.34},   occidente:{vis:7.17,novis:7.17},  itau:{vis:null,novis:null}, credifamilia:{vis:10.70,novis:10.70}, bancolombia:{vis:6.50,novis:8.40} },
+  hip_pesos:     { caja_social:{vis:13.40,novis:14.10}, av_villas:{vis:11.90,novis:12.40}, bbva:{vis:14.00,novis:15.50}, bogota:{vis:13.22,novis:14.03}, occidente:{vis:14.67,novis:14.67}, itau:{vis:null,novis:13.57}, credifamilia:{vis:15.99,novis:null}, bancolombia:{vis:14.20,novis:14.60} },
+  hip_uvr:       { caja_social:{vis:6.90,novis:7.40},  av_villas:{vis:8.20,novis:8.40},  bbva:{vis:6.95,novis:7.90},  bogota:{vis:7.44,novis:8.34},  occidente:{vis:7.17,novis:7.17}, itau:{vis:null,novis:null}, credifamilia:{vis:10.70,novis:null}, bancolombia:{vis:6.50,novis:8.40} },
   cartera_pesos: { caja_social:{vis:13.20,novis:13.90}, av_villas:{vis:12.50,novis:12.65}, bbva:{vis:15.50,novis:15.50}, bogota:{vis:14.44,novis:15.12}, occidente:{vis:14.62,novis:14.62}, itau:{vis:null,novis:13.37}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:null} },
-  cartera_uvr:   { caja_social:{vis:6.90,novis:7.40},  av_villas:{vis:7.20,novis:7.40},  bbva:{vis:5.86,novis:5.96},  bogota:{vis:null,novis:null},    occidente:{vis:7.11,novis:7.11},  itau:{vis:null,novis:null}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:null} },
-  leasing_pesos: { caja_social:{vis:null,novis:null},   av_villas:{vis:null,novis:13.40}, bbva:{vis:12.50,novis:13.67}, bogota:{vis:null,novis:13.89},   occidente:{vis:14.30,novis:14.30}, itau:{vis:null,novis:13.47}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:12.20} },
-  leasing_uvr:   { caja_social:{vis:null,novis:null},   av_villas:{vis:null,novis:null},  bbva:{vis:null,novis:null},  bogota:{vis:null,novis:null},    occidente:{vis:7.11,novis:7.11},  itau:{vis:null,novis:null}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:null} },
+  cartera_uvr:   { caja_social:{vis:6.90,novis:7.40},  av_villas:{vis:7.20,novis:7.40},  bbva:{vis:5.86,novis:5.96},  bogota:{vis:null,novis:null},  occidente:{vis:7.11,novis:7.11}, itau:{vis:null,novis:null}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:null} },
+  leasing_pesos: { caja_social:{vis:null,novis:null},   av_villas:{vis:null,novis:13.40}, bbva:{vis:12.50,novis:13.67}, bogota:{vis:null,novis:13.89}, occidente:{vis:14.30,novis:14.30}, itau:{vis:null,novis:13.47}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:12.20} },
+  leasing_uvr:   { caja_social:{vis:null,novis:null},   av_villas:{vis:null,novis:null},  bbva:{vis:null,novis:null},  bogota:{vis:null,novis:null},  occidente:{vis:7.11,novis:7.11}, itau:{vis:null,novis:null}, credifamilia:{vis:null,novis:null}, bancolombia:{vis:null,novis:null} },
 };
 
-// ════════════════════════════════════════════════
-// POLÍTICAS BANCARIAS
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// BANCOS
+// ══════════════════════════════════════════════════
 const BANCOS = [
-  {id:"caja_social",nombre:"Banco Caja Social",ltv:{vis_compra:80,novis_compra:80,vis_leasing:null,novis_leasing:null},plazo_max:{compra_vivienda:20,leasing:null,compra_cartera:20},plazo_uvr:25,edad_lim:75,tramites:["compra_vivienda","compra_cartera"],perfiles:["empleado_publico","empleado_privado","independiente","pensionado","transportador"],solo_vis:false,leasing_min:null,url:"https://www.bancocajasocial.com.co/personas/creditos/credito-de-vivienda",forms:["Solicitud de crédito Caja Social","Autorización tratamiento de datos","Certificado de ingresos","Declaración de origen de fondos"],nota:"Ingresos desde 1 SMLV. Cuota máx. 40% ingresos. Plazo UVR hasta 25 años."},
-  {id:"av_villas",nombre:"Banco AV Villas",ltv:{vis_compra:80,novis_compra:70,vis_leasing:80,novis_leasing:70},plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:20},plazo_uvr:20,edad_lim:85,tramites:["compra_vivienda","leasing","compra_cartera"],perfiles:["empleado_publico","empleado_privado","independiente","rentista","transportador","pensionado"],solo_vis:false,leasing_min:null,url:"https://www.avvillas.com.co/wps/portal/avvillas/personas/productos/creditos/credito-hipotecario",forms:["Formulario único AV Villas (digital)","Autorización central de riesgo","Declaración de bienes y rentas"],nota:"Trámite 100% digital. Transportadores: vehículo <10 años, empresa nacional."},
-  {id:"bbva",nombre:"BBVA",ltv:{vis_compra:70,novis_compra:70,vis_leasing:90,novis_leasing:90},plazo_max:{compra_vivienda:20,leasing:30,compra_cartera:null},plazo_uvr:20,edad_lim:85,tramites:["compra_vivienda","leasing"],perfiles:["empleado_publico","empleado_privado","independiente","rentista","pensionado"],solo_vis:false,leasing_min:50000000,url:"https://www.bbva.com.co/personas/productos/prestamos/credito-hipotecario.html",forms:["Solicitud BBVA Hipotecario","Estudio de crédito BBVA","Autorización datos personales BBVA"],nota:"Leasing desde $50M. LTV leasing hasta 90%. Edad+plazo máx 85 años."},
-  {id:"bogota",nombre:"Banco de Bogotá",ltv:{vis_compra:70,novis_compra:70,vis_leasing:80,novis_leasing:80},plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:null},plazo_uvr:20,edad_lim:80,tramites:["compra_vivienda","leasing"],perfiles:["empleado_publico","empleado_privado","independiente","rentista","transportador","pensionado"],solo_vis:false,leasing_min:null,url:"https://www.bancodebogota.com/wps/portal/banco-de-bogota/bogota/productos/para-tu-vivienda",forms:["Formulario vinculación Banco de Bogotá","Solicitud crédito hipotecario","Autorización consulta Cifin/Datacrédito"],nota:"Paga impuesto activo en Leasing desde 2026. No compra cartera Grupo Aval."},
-  {id:"occidente",nombre:"Banco de Occidente",ltv:{vis_compra:70,novis_compra:70,vis_leasing:90,novis_leasing:90},plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:null},plazo_uvr:20,edad_lim:85,tramites:["compra_vivienda","leasing"],perfiles:["empleado_publico","empleado_privado","independiente","pensionado"],solo_vis:false,leasing_min:null,url:"https://www.bancodeoccidente.com.co/wps/portal/banco-de-occidente/bancodeoccidente/para-tu-hogar/credito-hipotecario",forms:["Solicitud crédito Occidente","Declaración origen fondos","Autorización datos Occidente"],nota:"Especialistas en Leasing. LTV hasta 90%. Mínimo 10% inicial."},
-  {id:"itau",nombre:"Itaú",ltv:{vis_compra:70,novis_compra:70,vis_leasing:null,novis_leasing:null},plazo_max:{compra_vivienda:20,leasing:null,compra_cartera:20},plazo_uvr:20,edad_lim:85,tramites:["compra_vivienda","compra_cartera"],perfiles:["empleado_publico","empleado_privado"],solo_vis:false,leasing_min:null,cartera_min:30000000,url:"https://www.itau.co/personas/prestamos/credito-hipotecario",forms:["Solicitud crédito Itaú","Certificado ingresos Itaú","Autorización tratamiento datos"],nota:"Cartera desde $30M. No cobra avalúo en proyectos Itaú. Solo empleados."},
-  {id:"credifamilia",nombre:"Credifamilia",ltv:{vis_compra:80,novis_compra:null,vis_leasing:null,novis_leasing:null},plazo_max:{compra_vivienda:15,leasing:null,compra_cartera:null},plazo_uvr:15,edad_lim:80,edad_max_desembolso:65,edad_max_pensionado:72,tramites:["compra_vivienda"],perfiles:["empleado_publico","empleado_privado","independiente","pensionado"],solo_vis:true,leasing_min:null,url:"https://www.credifamilia.com.co/credito-hipotecario",forms:["Formulario Credifamilia VIS","Autorización central de riesgo","Certificado de ingresos"],nota:"Solo VIS. Edad máx desembolso: 65 años (pensionados 72)."},
-  {id:"bancolombia",nombre:"Bancolombia",ltv:{vis_compra:70,novis_compra:70,vis_leasing:null,novis_leasing:70},plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:null},plazo_uvr:20,edad_lim:85,tramites:["compra_vivienda","leasing"],perfiles:["empleado_publico","empleado_privado","independiente","rentista","pensionado"],solo_vis:false,leasing_min:null,solo_usada:true,url:"https://www.bancolombia.com/personas/creditos/credito-hipotecario",forms:["Solicitud crédito hipotecario Bancolombia","Estudio jurídico del inmueble","Autorización datos personales"],nota:"SOLO vivienda usada. Para vivienda nueva, referir al cliente directamente con el constructor."},
+  {id:"caja_social",  nombre:"Banco Caja Social",   ltv:{vis_c:80,novis_c:80,vis_l:null,novis_l:null}, plazo_max:{compra_vivienda:20,leasing:null,compra_cartera:20}, plazo_uvr:25, edad_lim:75, tramites:["compra_vivienda","compra_cartera"], perfiles:["empleado_publico","empleado_privado","independiente","pensionado","transportador"], solo_vis:false, leasing_min:null, url:"https://www.bancocajasocial.com.co/personas/creditos/credito-de-vivienda", forms:["Solicitud de crédito","Autorización tratamiento de datos","Certificado de ingresos","Declaración de origen de fondos"], nota:"Ingresos desde 1 SMLV. Cuota máx. 40% ingresos. UVR hasta 25 años."},
+  {id:"av_villas",    nombre:"Banco AV Villas",     ltv:{vis_c:80,novis_c:70,vis_l:80,novis_l:70},    plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:20},  plazo_uvr:20, edad_lim:85, tramites:["compra_vivienda","leasing","compra_cartera"], perfiles:["empleado_publico","empleado_privado","independiente","rentista","transportador","pensionado"], solo_vis:false, leasing_min:null, url:"https://www.avvillas.com.co/wps/portal/avvillas/personas/productos/creditos/credito-hipotecario", forms:["Formulario único AV Villas (digital)","Autorización central de riesgo","Declaración de bienes y rentas"], nota:"Trámite 100% digital. Transportadores: vehículo <10 años, empresa nacional."},
+  {id:"bbva",         nombre:"BBVA",                ltv:{vis_c:70,novis_c:70,vis_l:90,novis_l:90},    plazo_max:{compra_vivienda:20,leasing:30,compra_cartera:null}, plazo_uvr:20, edad_lim:85, tramites:["compra_vivienda","leasing","compra_cartera"], perfiles:["empleado_publico","empleado_privado","independiente","rentista","pensionado"], solo_vis:false, leasing_min:50000000, url:"https://www.bbva.com.co/personas/productos/prestamos/credito-hipotecario.html", forms:["Solicitud BBVA Hipotecario","Estudio de crédito BBVA","Autorización datos personales"], nota:"Leasing desde $50M. LTV leasing hasta 90%. Edad+plazo máx 85 años."},
+  {id:"bogota",       nombre:"Banco de Bogotá",     ltv:{vis_c:70,novis_c:70,vis_l:80,novis_l:80},    plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:null}, plazo_uvr:20, edad_lim:80, tramites:["compra_vivienda","leasing","compra_cartera"], perfiles:["empleado_publico","empleado_privado","independiente","rentista","transportador","pensionado"], solo_vis:false, leasing_min:null, url:"https://www.bancodebogota.com/wps/portal/banco-de-bogota/bogota/productos/para-tu-vivienda", forms:["Formulario vinculación","Solicitud crédito hipotecario","Autorización consulta Cifin/Datacrédito"], nota:"Paga impuesto activo en Leasing desde 2026. No compra cartera Grupo Aval."},
+  {id:"occidente",    nombre:"Banco de Occidente",  ltv:{vis_c:70,novis_c:70,vis_l:90,novis_l:90},    plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:null}, plazo_uvr:20, edad_lim:85, tramites:["compra_vivienda","leasing","compra_cartera"], perfiles:["empleado_publico","empleado_privado","independiente","pensionado"], solo_vis:false, leasing_min:null, url:"https://www.bancodeoccidente.com.co/wps/portal/banco-de-occidente/bancodeoccidente/para-tu-hogar/credito-hipotecario", forms:["Solicitud crédito Occidente","Declaración origen fondos","Autorización datos"], nota:"Especialistas en Leasing. LTV hasta 90%. Mínimo 10% inicial."},
+  {id:"itau",         nombre:"Itaú",                ltv:{vis_c:70,novis_c:70,vis_l:null,novis_l:null}, plazo_max:{compra_vivienda:20,leasing:null,compra_cartera:20}, plazo_uvr:20, edad_lim:85, tramites:["compra_vivienda","compra_cartera"], perfiles:["empleado_publico","empleado_privado"], solo_vis:false, leasing_min:null, cartera_min:30000000, url:"https://www.itau.co/personas/prestamos/credito-hipotecario", forms:["Solicitud crédito Itaú","Certificado ingresos","Autorización datos"], nota:"Cartera desde $30M. No cobra avalúo en proyectos Itaú. Solo empleados."},
+  {id:"credifamilia", nombre:"Credifamilia",        ltv:{vis_c:80,novis_c:null,vis_l:null,novis_l:null}, plazo_max:{compra_vivienda:15,leasing:null,compra_cartera:null}, plazo_uvr:15, edad_lim:80, edad_max_desembolso:65, edad_max_pensionado:72, tramites:["compra_vivienda"], perfiles:["empleado_publico","empleado_privado","independiente","pensionado"], solo_vis:true, leasing_min:null, url:"https://www.credifamilia.com.co/credito-hipotecario", forms:["Formulario Credifamilia VIS","Autorización central de riesgo","Certificado de ingresos"], nota:"Solo VIS. Edad máx desembolso: 65 años (pensionados 72)."},
+  {id:"bancolombia",  nombre:"Bancolombia",         ltv:{vis_c:70,novis_c:70,vis_l:null,novis_l:70},   plazo_max:{compra_vivienda:20,leasing:20,compra_cartera:null}, plazo_uvr:20, edad_lim:85, tramites:["compra_vivienda","leasing"], perfiles:["empleado_publico","empleado_privado","independiente","rentista","pensionado"], solo_vis:false, leasing_min:null, solo_usada:true, url:"https://www.bancolombia.com/personas/creditos/credito-hipotecario", forms:["Solicitud crédito hipotecario","Estudio jurídico del inmueble","Autorización datos personales"], nota:"SOLO vivienda usada. Para vivienda nueva, referir al constructor."},
 ];
 
-// ════════════════════════════════════════════════
-// RESTRICCIONES COMPRA DE CARTERA CRUZADA
-// ════════════════════════════════════════════════
+// Restricciones cruzadas compra de cartera
 const NO_COMPRA = {
   bogota:     ["av_villas","occidente","popular","bogota"],
   av_villas:  ["bogota","occidente","popular","av_villas"],
@@ -362,106 +318,125 @@ const DOCS = {
   pensionado:["Cédula","Resolución de pensión o certificado de mesada","Últimas 3 colillas de pago pensional","Extractos bancarios 3 meses"]
 };
 
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// FORMATO DE MILES EN INPUTS
+// ══════════════════════════════════════════════════
+function fmtInput(el){
+  // Solo formatea visualmente, el valor numérico queda intacto
+  const raw = el.value.replace(/\D/g,'');
+  el.dataset.raw = raw;
+}
+
+function getNum(id){
+  const el = document.getElementById(id);
+  return parseFloat((el.dataset.raw||el.value||'0').replace(/\./g,'').replace(',','.')) || 0;
+}
+
+// ══════════════════════════════════════════════════
 // EVENTOS
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 document.getElementById('f_tramite').addEventListener('change', onTramiteChange);
-document.getElementById('f_perfil').addEventListener('change', ()=>{ document.getElementById('box_vehiculo').classList.toggle('hidden', document.getElementById('f_perfil').value!=='transportador'); preview(); });
-document.getElementById('f_ciudad').addEventListener('change', onCiudadChange);
+document.getElementById('f_perfil').addEventListener('change', ()=>{
+  document.getElementById('box_vehiculo').classList.toggle('hidden', document.getElementById('f_perfil').value!=='transportador');
+  preview();
+});
+document.getElementById('f_ciudad').addEventListener('change', ()=>{ onCiudadChange(); calcMontoAuto(); preview(); });
 document.getElementById('f_ingresos').addEventListener('input', ()=>{ updateSMLV(); preview(); });
-['f_plazo','f_monto'].forEach(id=>document.getElementById(id).addEventListener('input',preview));
+['f_plazo','f_monto'].forEach(id=>document.getElementById(id).addEventListener('input', preview));
 document.getElementById('f_valor').addEventListener('input', ()=>{ calcMontoAuto(); preview(); });
 document.getElementById('f_edad').addEventListener('input', function(){
   const e=parseInt(this.value)||0, w=document.getElementById('edad_warn');
   e>75?(w.textContent='⚠️ Supera 75 años — opciones muy limitadas.',w.classList.remove('hidden')):w.classList.add('hidden');
   preview();
 });
-document.querySelectorAll('input[name="moras"]').forEach(r=>r.addEventListener('change',preview));
+document.querySelectorAll('input[name="moras"]').forEach(r=>r.addEventListener('change', preview));
 
 function onTramiteChange(){
-  const t=document.getElementById('f_tramite').value;
-  const ec=t==='compra_cartera', el=t==='leasing';
+  const t = document.getElementById('f_tramite').value;
+  const ec = t==='compra_cartera', el = t==='leasing';
   document.getElementById('box_tipo_viv').classList.toggle('hidden', ec || t==='');
   document.getElementById('box_banco_origen').classList.toggle('hidden', !ec);
   document.getElementById('box_tasa_actual').classList.toggle('hidden', !ec);
   document.getElementById('box_plazo_restante').classList.toggle('hidden', !ec);
+  // Etiqueta valor: en compra de cartera pide valor comercial del inmueble
   document.getElementById('lbl_valor').innerHTML = ec
-    ? 'Saldo a Cancelar <span class="text-red-500">*</span>'
+    ? 'Valor Comercial del Inmueble <span class="text-red-500">*</span>'
     : 'Valor del Inmueble <span class="text-red-500">*</span>';
   document.getElementById('hint_valor').textContent = ec
-    ? 'Monto de la deuda que se traslada al nuevo banco.'
-    : 'Se calculará el '+(el?'90%':'80%')+' automáticamente.';
+    ? 'El banco presta hasta el 80% del valor comercial (se calcula en el 70% automático para comparar todos los bancos).'
+    : 'Se calculará el '+(el?'90%':'70%')+' automáticamente como monto a financiar.';
   document.getElementById('hint_plazo').textContent = el ? 'Leasing: hasta 30 años.' : 'Hipotecario: 5–20 años.';
   calcMontoAuto(); preview();
 }
 
 function onCiudadChange(){
-  const v=document.getElementById('f_ciudad').value;
-  const lbl=document.getElementById('tope_vis_label');
-  if(v){ const t=topeVIS(parseInt(v)); lbl.textContent=`Tope VIS aquí: $${fmt(t)} (${v} SMLV)`; lbl.classList.remove('hidden'); }
+  const v = document.getElementById('f_ciudad').value;
+  const lbl = document.getElementById('tope_vis_label');
+  if(v){ const t=topeVIS(parseInt(v)); lbl.textContent=`Tope VIS aquí: $${cop(t)} (${v} SMLV)`; lbl.classList.remove('hidden'); }
   else lbl.classList.add('hidden');
-  calcMontoAuto(); preview();
 }
 
 function calcMontoAuto(){
-  const t=document.getElementById('f_tramite').value;
-  const v=parseFloat(document.getElementById('f_valor').value)||0;
-  if(!v||!t) return;
-  const pct = t==='leasing' ? 0.90 : 0.80;
-  document.getElementById('f_monto').value = t==='compra_cartera' ? v : Math.round(v*pct) || '';
+  const v = parseFloat(document.getElementById('f_valor').value)||0;
+  if(!v) return;
+  // Siempre 70% para comparar todos los bancos; en cartera sobre valor comercial
+  const auto = Math.round(v * LTV_AUTO);
+  document.getElementById('f_monto').value = auto || '';
 }
 
 function updateSMLV(){
-  const ing=parseFloat(document.getElementById('f_ingresos').value)||0;
+  const ing = parseFloat(document.getElementById('f_ingresos').value)||0;
   document.getElementById('smlv_label').textContent = ing>0 ? `≈ ${(ing/SMLV).toFixed(1)} SMLV` : '';
 }
 
 function getTopeVIS(){ return topeVIS(parseInt(document.getElementById('f_ciudad').value)||135); }
 
 function preview(){
-  const ing=parseFloat(document.getElementById('f_ingresos').value)||0;
-  const perfil=document.getElementById('f_perfil').value;
-  const monto=parseFloat(document.getElementById('f_monto').value)||0;
-  const plazo=parseInt(document.getElementById('f_plazo').value)||0;
-  const box=document.getElementById('dti_preview');
+  const ing = parseFloat(document.getElementById('f_ingresos').value)||0;
+  const perfil = document.getElementById('f_perfil').value;
+  const monto = parseFloat(document.getElementById('f_monto').value)||0;
+  const plazo = parseInt(document.getElementById('f_plazo').value)||0;
+  const box = document.getElementById('dti_preview');
   if(!ing||!perfil||!monto||!plazo){ box.classList.add('hidden'); return; }
-  const f=FACTOR[perfil]||1, ir=ing*f;
-  const cuota=cuotaFija(monto,eaAmv(14),plazo*12);
-  const dti=ir>0?(cuota/ir)*100:0;
-  const col=dti>40?'bg-red-500':dti>30?'bg-amber-400':'bg-green-500';
-  const msg=dti>40
-    ?`🔴 <strong>No clasifica en Pesos.</strong> Se evaluará UVR al calcular.`
-    :dti>30?`🟡 <strong>Capacidad ajustada.</strong> Clasifica con margen justo — recomendar plazo máximo.`
-    :`🟢 <strong>Buena capacidad de pago.</strong> El cliente clasifica cómodamente.`;
+  const f = FACTOR[perfil]||1, ir = ing*f;
+  const cuota = cuotaFija(monto, eaAmv(14), plazo*12);
+  const dti = ir>0?(cuota/ir)*100:0;
+  const col = dti>40?'bg-red-500':dti>30?'bg-amber-400':'bg-green-500';
+  const msg = dti>40
+    ? `🔴 <strong>No clasifica en Pesos.</strong> Se evaluará UVR como alternativa al calcular.`
+    : dti>30 ? `🟡 <strong>Capacidad ajustada.</strong> Clasifica con margen justo — recomendar plazo máximo.`
+    : `🟢 <strong>Buena capacidad de pago.</strong> El cliente clasifica cómodamente.`;
   box.classList.remove('hidden');
-  document.getElementById('dti_texto').innerHTML=`Ingreso bruto <strong>$${fmt(ing)}</strong> → banco reconoce <strong>$${fmt(ir)}</strong> (factor ×${f} para ${P_LABEL[perfil]||'perfil'}) · Cuota de referencia: <strong>$${fmt(cuota)}</strong>`;
-  document.getElementById('dti_barra').className=`progress-bar ${col}`;
-  document.getElementById('dti_barra').style.width=(Math.min(dti,50)*2)+'%';
-  document.getElementById('dti_pct').textContent=dti.toFixed(1)+'%';
-  document.getElementById('dti_msg').innerHTML=msg;
+  document.getElementById('dti_texto').innerHTML =
+    `Ingreso bruto <strong>$${cop(ing)}</strong> → banco reconoce <strong>$${cop(ir)}</strong> (×${f} para ${P_LABEL[perfil]||'perfil'}) · Cuota referencia: <strong>$${cop(cuota)}</strong>`;
+  document.getElementById('dti_barra').className = `progress-bar ${col}`;
+  document.getElementById('dti_barra').style.width = (Math.min(dti,50)*2)+'%';
+  document.getElementById('dti_pct').textContent = dti.toFixed(1)+'%';
+  document.getElementById('dti_msg').innerHTML = msg;
 }
 
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 // CALCULAR
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 function calcular(){
-  const nombre=document.getElementById('f_nombre').value.trim()||'Cliente';
-  const edad=parseInt(document.getElementById('f_edad').value)||0;
-  const perfil=document.getElementById('f_perfil').value;
-  const tramite=document.getElementById('f_tramite').value;
-  const ingresos=parseFloat(document.getElementById('f_ingresos').value)||0;
-  const valor=parseFloat(document.getElementById('f_valor').value)||0;
-  const monto_input=parseFloat(document.getElementById('f_monto').value)||0;
-  const plazo_input=parseInt(document.getElementById('f_plazo').value)||0;
-  const tipo_viv=document.getElementById('f_tipo_viv').value;
-  const banco_origen=document.getElementById('f_banco_origen').value;
-  const tasa_actual=parseFloat(document.getElementById('f_tasa_actual').value)||0;
-  const plazo_restante=parseInt(document.getElementById('f_plazo_restante').value)||0;
-  const veh_anos=parseInt(document.getElementById('f_vehiculo').value)||0;
-  const moras=document.querySelector('input[name="moras"]:checked');
-  const empresa=document.getElementById('f_empresa').value;
+  const nombre   = document.getElementById('f_nombre').value.trim()||'Cliente';
+  const edad     = parseInt(document.getElementById('f_edad').value)||0;
+  const perfil   = document.getElementById('f_perfil').value;
+  const tramite  = document.getElementById('f_tramite').value;
+  const ingresos = parseFloat(document.getElementById('f_ingresos').value)||0;
+  const valor    = parseFloat(document.getElementById('f_valor').value)||0;
+  const monto_input = parseFloat(document.getElementById('f_monto').value)||0;
+  const plazo_input = parseInt(document.getElementById('f_plazo').value)||0;
+  const tipo_viv    = document.getElementById('f_tipo_viv').value;
+  const banco_origen= document.getElementById('f_banco_origen').value;
+  const tasa_actual = parseFloat(document.getElementById('f_tasa_actual').value)||0;
+  const plazo_restante = parseInt(document.getElementById('f_plazo_restante').value)||0;
+  const veh_anos = parseInt(document.getElementById('f_vehiculo').value)||0;
+  const moras    = document.querySelector('input[name="moras"]:checked');
+  const empresa  = document.getElementById('f_empresa').value;
 
-  if(!perfil||!tramite||!ingresos||!valor||!monto_input||!plazo_input){ alert('Por favor completa todos los campos obligatorios (*).'); return; }
+  if(!perfil||!tramite||!ingresos||!valor||!monto_input||!plazo_input){
+    alert('Por favor completa todos los campos obligatorios (*).'); return; }
   if(!edad||edad<18){ alert('Ingresa una edad válida.'); return; }
   if(tramite==='compra_vivienda'&&!tipo_viv){ alert('Indica si la vivienda es nueva o usada.'); return; }
   if(tramite==='compra_cartera'&&!banco_origen){ alert('Indica con qué banco tiene actualmente la cartera.'); return; }
@@ -469,41 +444,79 @@ function calcular(){
 
   if(moras.value==='si'){
     mostrarRechazo('CLIENTE CON REPORTE NEGATIVO / MORA VIGENTE',
-      `El cliente presenta moras o reportes negativos en Cifin/Datacrédito.<br><br>
-      <strong>Acción recomendada:</strong> Remitir a proceso de saneamiento antes de radicar. El riesgo de rechazo por Score supera el 90%, lo que genera desgaste operativo sin resultado.<br><br>
-      Una vez el cliente tenga historial limpio, puede volver a usar el simulador.`);
-    return;
-  }
-  if(edad>75){ mostrarRechazo('EDAD MÁXIMA SUPERADA',`El cliente tiene ${edad} años, superando el límite de 75 años para el seguro de vida hipotecario. Ningún banco puede gestionar este crédito.`); return; }
+      `El cliente presenta moras o reportes en Cifin/Datacrédito.<br><br>
+      <strong>Acción recomendada:</strong> Remitir a proceso de saneamiento antes de radicar. El riesgo de rechazo por Score supera el 90%, generando desgaste operativo sin resultado.<br><br>
+      Una vez el titular tenga historial limpio, puede volver a usar el simulador.`); return; }
 
-  const factor=FACTOR[perfil]||1;
-  const ing_real=ingresos*factor;
-  const tope_vis=getTopeVIS();
-  const es_vis=valor<=tope_vis;
-  const tv=es_vis?'vis':'novis';
+  if(edad>75){
+    mostrarRechazo('EDAD MÁXIMA SUPERADA',
+      `El cliente tiene ${edad} años, superando el límite de 75 años para el seguro de vida hipotecario. Ningún banco puede gestionar este crédito.`); return; }
 
-  const res_pesos=evaluarBancos({tramite,perfil,edad,valor,monto_input,plazo_input,ing_real,es_vis,tv,veh_anos,tipo_viv,banco_origen,modo:'pesos'});
-  let res_uvr={aprobados:[],descartados:[]};
-  if(res_pesos.aprobados.length===0){
-    res_uvr=evaluarBancos({tramite,perfil,edad,valor,monto_input,plazo_input,ing_real,es_vis,tv,veh_anos,tipo_viv,banco_origen,modo:'uvr'});
-  }
+  const factor   = FACTOR[perfil]||1;
+  const ing_real = ingresos * factor;
+  const tope_vis = getTopeVIS();
+  const es_vis   = valor <= tope_vis;
+  const tv       = es_vis?'vis':'novis';
 
-  // Guardar contexto para paso 2
-  window._ctx={nombre,edad,perfil,tramite,ingresos,valor,monto_input,plazo_input,empresa,
-    ciudad:document.getElementById('f_ciudad').options[document.getElementById('f_ciudad').selectedIndex]?.text||'',
-    tasa_actual,plazo_restante,banco_origen,
-    fecha:new Date().toLocaleDateString('es-CO')};
+  const res_pesos = evaluarBancos({tramite,perfil,edad,valor,monto_input,plazo_input,ing_real,es_vis,tv,veh_anos,tipo_viv,banco_origen,modo:'pesos'});
+  let res_uvr = {aprobados:[],descartados:[]};
+  if(res_pesos.aprobados.length===0)
+    res_uvr = evaluarBancos({tramite,perfil,edad,valor,monto_input,plazo_input,ing_real,es_vis,tv,veh_anos,tipo_viv,banco_origen,modo:'uvr'});
 
-  renderResultado({nombre,edad,perfil,tramite,ingresos,ing_real,factor,valor,monto_input,es_vis,tope_vis,plazo_input,tipo_viv,banco_origen,tasa_actual,plazo_restante,res_pesos,res_uvr});
+  window._ctx = {nombre,edad,perfil,tramite,ingresos,valor,monto_input,plazo_input,empresa,banco_origen,
+    ciudad: document.getElementById('f_ciudad').options[document.getElementById('f_ciudad').selectedIndex]?.text||'',
+    fecha: new Date().toLocaleDateString('es-CO')};
 
-  // Mostrar paso 2
-  document.getElementById('paso2').classList.remove('hidden');
+  renderResultado({nombre,edad,perfil,tramite,ingresos,ing_real,factor,valor,monto_input,
+    es_vis,tope_vis,plazo_input,tipo_viv,banco_origen,tasa_actual,plazo_restante,res_pesos,res_uvr});
+
+  // Siempre habilitar paso 2
+  const p2 = document.getElementById('paso2');
+  p2.classList.remove('hidden');
+  // Limpiar campos datos personales
+  ['f_tipo_doc','f_doc','f_celular'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el) el.tagName==='SELECT'?el.value='':el.value='';
+  });
+  // Restaurar botones del paso 2
+  p2.innerHTML = p2.innerHTML; // Re-render (reattach listeners)
+  reiniciarPaso2();
+
   document.getElementById('btns_accion').classList.remove('hidden');
+  document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
 }
 
-// ════════════════════════════════════════════════
+function reiniciarPaso2(){
+  document.getElementById('paso2').innerHTML = `
+  <h2 class="text-sm font-bold text-gray-800 mb-1 flex items-center gap-2">
+    <span class="step-dot">2</span> ¿El cliente desea continuar con la oferta?
+  </h2>
+  <p class="text-xs text-gray-500 mb-4">Solo si acepta, registra sus datos. Tratamiento de datos personales bajo <strong>Ley 1581 de 2012</strong>.</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+    <div><label class="lbl">Tipo de documento <span class="text-red-500">*</span></label>
+      <select id="f_tipo_doc" class="inp bg-white">
+        <option value="">-- Seleccionar --</option>
+        <option>Cédula de Ciudadanía</option>
+        <option>Cédula de Extranjería</option>
+        <option>Pasaporte</option>
+      </select></div>
+    <div><label class="lbl">Número de documento <span class="text-red-500">*</span></label>
+      <input id="f_doc" type="text" placeholder="123456789" class="inp"/></div>
+    <div><label class="lbl">Celular <span class="text-red-500">*</span></label>
+      <input id="f_celular" type="tel" placeholder="300 000 0000" class="inp"/></div>
+  </div>
+  <div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800">
+    <strong>Autorización:</strong> Al registrar sus datos el titular autoriza a Colibran el tratamiento de sus datos personales con fines exclusivos de asesoría en crédito de vivienda, conforme a la Ley 1581 de 2012.
+  </div>
+  <div class="flex gap-3 mt-4 flex-wrap">
+    <button onclick="aceptarOferta()" class="flex-1 bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl text-sm transition shadow">✅ Cliente acepta — Registrar y continuar</button>
+    <button onclick="rechazarOferta()" class="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-3 rounded-xl text-sm transition">❌ Cliente no continúa</button>
+  </div>`;
+}
+
+// ══════════════════════════════════════════════════
 // EVALUADOR
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 function evaluarBancos(ctx){
   const {tramite,perfil,edad,valor,monto_input,plazo_input,ing_real,es_vis,tv,veh_anos,tipo_viv,banco_origen,modo}=ctx;
   const aprobados=[], descartados=[];
@@ -513,10 +526,10 @@ function evaluarBancos(ctx){
     if(!b.tramites.includes(tramite)){m.push(`No ofrece ${T_LABEL[tramite]}`);descartados.push({b,m});continue;}
     if(!b.perfiles.includes(perfil)){m.push(`No acepta perfil ${P_LABEL[perfil]}`);descartados.push({b,m});continue;}
     if(b.solo_vis&&!es_vis){m.push('Solo financia VIS');descartados.push({b,m});continue;}
-    if(b.id==='bancolombia'&&tramite==='compra_vivienda'&&tipo_viv==='nueva'){m.push('Bancolombia solo financia vivienda usada — referir al constructor');descartados.push({b,m});continue;}
+    if(b.id==='bancolombia'&&tramite==='compra_vivienda'&&tipo_viv==='nueva'){m.push('Solo financia vivienda usada — referir al constructor para vivienda nueva');descartados.push({b,m});continue;}
     if(perfil==='transportador'){
       if(b.id!=='av_villas'&&b.id!=='caja_social'){m.push('Solo AV Villas o Caja Social para transportadores');descartados.push({b,m});continue;}
-      if(b.id==='caja_social'&&tramite==='leasing'&&!es_vis){m.push('Caja Social no opera Leasing No VIS para transportadores');descartados.push({b,m});continue;}
+      if(b.id==='caja_social'&&tramite==='leasing'&&!es_vis){m.push('Caja Social no opera Leasing No VIS transportadores');descartados.push({b,m});continue;}
       if(veh_anos>=10){m.push('Vehículo ≥10 años — no aplica');descartados.push({b,m});continue;}
     }
     if(b.id==='credifamilia'){
@@ -524,45 +537,57 @@ function evaluarBancos(ctx){
       if(edad>emax){m.push(`Edad supera máximo Credifamilia (${emax} años)`);descartados.push({b,m});continue;}
     }
     const pl_banco=b.plazo_max[tramite];
-    if(!pl_banco){m.push(`Sin plazo para ${T_LABEL[tramite]}`);descartados.push({b,m});continue;}
+    if(!pl_banco){m.push(`Sin plazo definido para ${T_LABEL[tramite]}`);descartados.push({b,m});continue;}
     const pl_uvr=modo==='uvr'?(b.plazo_uvr||pl_banco):pl_banco;
     const pl_disp=Math.min(pl_banco,pl_uvr,b.edad_lim-edad);
     if(pl_disp<5){m.push(`Plazo disponible <5 años (edad ${edad}, límite ${b.edad_lim})`);descartados.push({b,m});continue;}
     if(plazo_input>pl_banco){m.push(`Plazo solicitado (${plazo_input}a) > máximo banco (${pl_banco}a)`);descartados.push({b,m});continue;}
+
+    // Restricción cruzada cartera
     if(tramite==='compra_cartera'&&banco_origen){
       const nl=NO_COMPRA[b.id]||[];
-      if(nl.includes(banco_origen)){m.push(`${b.nombre} no compra cartera de este banco (restricción cruzada)`);descartados.push({b,m});continue;}
+      if(nl.includes(banco_origen)){m.push(`No compra cartera de este banco (restricción cruzada)`);descartados.push({b,m});continue;}
     }
+
+    // Tasa
     const tk=tramite==='leasing'?'leasing':tramite==='compra_cartera'?'cartera':'hip';
     const tbl=T[tk+'_'+modo];
     const tasa_raw=tbl&&tbl[b.id]?tbl[b.id][tv]:null;
     if(tasa_raw===null||tasa_raw===undefined){m.push(`Sin tasa ${modo.toUpperCase()} para ${es_vis?'VIS':'No VIS'}`);descartados.push({b,m});continue;}
     const tasa_ea=modo==='uvr'?UVR+tasa_raw:tasa_raw;
     const spread_uvr=modo==='uvr'?tasa_raw:null;
-    let ltv_pct=null;
-    if(tramite!=='compra_cartera'){
-      const lk=(es_vis?'vis':'novis')+'_'+(tramite==='leasing'?'leasing':'compra');
+
+    // LTV — para compra de cartera validar contra 80% del valor comercial
+    let ltv_pct=null, monto_max=monto_input;
+    if(tramite==='compra_cartera'){
+      monto_max = valor*0.80; // banco presta hasta 80% del valor comercial
+      if(monto_input>monto_max+500){m.push(`Saldo ($${cop(monto_input)}) supera el 80% del valor comercial ($${cop(monto_max)})`);descartados.push({b,m});continue;}
+    } else {
+      const lk=(es_vis?'vis':'novis')+'_'+(tramite==='leasing'?'l':'c');
       ltv_pct=b.ltv[lk];
       if(!ltv_pct){m.push('Sin LTV definido para este producto');descartados.push({b,m});continue;}
-      const monto_max=valor*(ltv_pct/100);
-      if(monto_input>monto_max+500){m.push(`Requiere $${fmt(monto_input)} — banco presta máx $${fmt(monto_max)} (${ltv_pct}%)`);descartados.push({b,m});continue;}
+      monto_max=valor*(ltv_pct/100);
+      if(monto_input>monto_max+500){m.push(`Requiere $${cop(monto_input)} — banco presta máx $${cop(monto_max)} (${ltv_pct}%)`);descartados.push({b,m});continue;}
     }
-    if(tramite==='leasing'&&b.leasing_min&&monto_input<b.leasing_min){m.push(`Monto < mínimo leasing ($${fmt(b.leasing_min)})`);descartados.push({b,m});continue;}
-    if(tramite==='compra_cartera'&&b.cartera_min&&valor<b.cartera_min){m.push(`Saldo < mínimo cartera ($${fmt(b.cartera_min)})`);descartados.push({b,m});continue;}
+    if(tramite==='leasing'&&b.leasing_min&&monto_input<b.leasing_min){m.push(`Monto < mínimo leasing ($${cop(b.leasing_min)})`);descartados.push({b,m});continue;}
+    if(tramite==='compra_cartera'&&b.cartera_min&&monto_input<b.cartera_min){m.push(`Saldo < mínimo cartera ($${cop(b.cartera_min)})`);descartados.push({b,m});continue;}
+
     const pl_usar=Math.min(plazo_input,pl_disp);
-    const monto_b=tramite==='compra_cartera'?valor:Math.min(monto_input,ltv_pct?valor*(ltv_pct/100):monto_input);
+    const monto_b=tramite==='compra_cartera'?monto_input:Math.min(monto_input,monto_max);
     const cuota=cuotaFija(monto_b,eaAmv(tasa_ea),pl_usar*12);
     const dti=ing_real>0?(cuota/ing_real)*100:999;
-    if(dti>40){m.push(`DTI ${dti.toFixed(1)}% > 40% (cuota $${fmt(cuota)} / ingreso real $${fmt(ing_real)})`);descartados.push({b,m});continue;}
+    if(dti>40){m.push(`DTI ${dti.toFixed(1)}% > 40% (cuota $${cop(cuota)} / ingreso real $${cop(ing_real)})`);descartados.push({b,m});continue;}
+
     aprobados.push({b,ltv_pct,monto_b,cuota,dti,pl_usar,tasa_ea,spread_uvr,modo});
   }
+
   aprobados.sort((a,b)=>a.tasa_ea-b.tasa_ea);
   return {aprobados,descartados};
 }
 
-// ════════════════════════════════════════════════
-// RENDER RESULTADO
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// RENDER
+// ══════════════════════════════════════════════════
 function renderResultado(d){
   const fecha=new Date().toLocaleDateString('es-CO',{day:'2-digit',month:'long',year:'numeric'});
   const pl=P_LABEL[d.perfil], tl=T_LABEL[d.tramite];
@@ -576,14 +601,14 @@ function renderResultado(d){
   <div class="grad text-white rounded-2xl p-5">
     <div class="flex justify-between flex-wrap gap-3">
       <div>
-        <p class="text-blue-200 text-xs uppercase tracking-widest">Diagnóstico Colibran · ${fecha}</p>
+        <p class="text-blue-200 text-xs uppercase tracking-widest">Diagnóstico · Colibran · ${fecha}</p>
         <h2 class="text-2xl font-extrabold mt-1">${d.nombre}</h2>
         <p class="text-blue-200 text-sm">${pl} · ${d.edad} años · ${tl}</p>
       </div>
       <div class="text-right text-sm">
-        <p class="font-semibold">${d.tramite==='compra_cartera'?'Saldo':'Inmueble'}: $${fmt(d.valor)}</p>
-        <p class="text-blue-200 text-xs">Financiar: $${fmt(d.monto_input)} · ${d.plazo_input} años</p>
-        <span class="badge ${d.es_vis?'badge-green':'badge-blue'} mt-1 inline-block">${d.es_vis?'🟢 VIS':'🔵 No VIS'} · tope $${fmt(d.tope_vis)}</span>
+        <p class="font-semibold">${d.tramite==='compra_cartera'?'Valor comercial':'Inmueble'}: $${cop(d.valor)}</p>
+        <p class="text-blue-200 text-xs">Financiar: $${cop(d.monto_input)} · ${d.plazo_input} años</p>
+        <span class="badge ${d.es_vis?'badge-green':'badge-blue'} mt-1 inline-block">${d.es_vis?'🟢 VIS':'🔵 No VIS'} · tope $${cop(d.tope_vis)}</span>
       </div>
     </div>
   </div>`;
@@ -595,48 +620,51 @@ function renderResultado(d){
   html+=`
   <div class="card">
     <h3 class="text-sm font-bold text-gray-800 mb-1">📊 Capacidad del Cliente</h3>
-    <p class="text-xs text-gray-500 mb-3">El <strong>DTI de Vivienda</strong> mide cuánto del ingreso real reconocido por el banco se destina a la cuota hipotecaria. La Ley 546 fija el límite en <strong>40%</strong>. Las deudas de consumo (tarjetas, vehículo) no entran en este cálculo.</p>
+    <p class="text-xs text-gray-500 mb-3">El <strong>DTI de Vivienda</strong> mide qué porcentaje del ingreso real reconocido por el banco se destinaría a la cuota. La Ley 546 fija el límite en <strong>40%</strong>. Las deudas de consumo no entran en este cálculo.</p>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-      <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">Ingreso Bruto</p><p class="font-bold">$${fmt(d.ingresos)}</p></div>
-      <div class="bg-blue-50 rounded-xl p-3"><p class="text-xs text-gray-500">Ingreso Real ×${d.factor}</p><p class="font-bold text-blue-900">$${fmt(d.ing_real)}</p>${d.factor<1?`<p class="text-xs text-amber-600">${pl} = ${d.factor*100}%</p>`:''}</div>
-      <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">Mejor cuota</p><p class="font-bold">${ref?'$'+fmt(ref.cuota):'—'}</p></div>
+      <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">Ingreso Bruto</p><p class="font-bold">$${cop(d.ingresos)}</p></div>
+      <div class="bg-blue-50 rounded-xl p-3"><p class="text-xs text-gray-500">Ingreso Real ×${d.factor}</p><p class="font-bold text-blue-900">$${cop(d.ing_real)}</p>${d.factor<1?`<p class="text-xs text-amber-600">${pl} = ${d.factor*100}%</p>`:''}</div>
+      <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">Mejor cuota</p><p class="font-bold">${ref?'$'+cop(ref.cuota):'—'}</p></div>
       <div class="rounded-xl p-3" style="background:${dc};color:${dt}"><p class="text-xs opacity-70">DTI Vivienda</p><p class="font-bold">${dti_r>0?(dti_r>40?'🔴':dti_r>30?'🟡':'🟢')+' '+dti_r.toFixed(1)+'%':'—'}</p><p class="text-xs opacity-60">Límite 40%</p></div>
     </div>
   </div>`;
 
   if(!principal){
-    html+=`<div class="card border-l-4 border-red-500"><h3 class="font-bold text-red-700 text-lg mb-2">❌ Sin Opciones Disponibles</h3><p class="text-sm text-gray-600 mb-3">El cliente no clasifica en ningún banco ni en Pesos ni en UVR.</p>${d.res_pesos.descartados.map(x=>`<div class="bg-red-50 rounded-xl p-3 mb-2"><p class="font-semibold text-sm">${x.b.nombre}</p>${x.m.map(mo=>`<p class="text-xs text-red-500">• ${mo}</p>`).join('')}</div>`).join('')}</div>`;
+    html+=`<div class="card border-l-4 border-red-500"><h3 class="font-bold text-red-700 text-lg mb-2">❌ Sin Opciones Disponibles</h3><p class="text-sm text-gray-600 mb-3">El cliente no clasifica en ningún banco ni en Pesos ni en UVR con las condiciones actuales.</p>${d.res_pesos.descartados.map(x=>`<div class="bg-red-50 rounded-xl p-3 mb-2"><p class="font-semibold text-sm">${x.b.nombre}</p>${x.m.map(mo=>`<p class="text-xs text-red-500">• ${mo}</p>`).join('')}</div>`).join('')}</div>`;
   } else {
     html+=tablaComparativa(d,pp,pu);
     if(pp.length>0) html+=bloqueRecomendacion(d,pp[0],'pesos');
     if(pp.length===0&&pu.length>0) html+=bloqueRecomendacion(d,pu[0],'uvr');
     if(d.tramite==='compra_cartera'&&d.tasa_actual>0&&d.plazo_restante>0&&ref) html+=bloqueAhorro(d,ref);
-    html+=bloqueDescartados(d.res_pesos.descartados);
+    html+=bloqueDescartados([...d.res_pesos.descartados,...d.res_uvr.descartados]);
   }
 
-  html+=bloqueSubsidios(d.ingresos);
+  // Subsidios solo en compra de vivienda nueva
+  if(d.tramite==='compra_vivienda'&&d.tipo_viv==='nueva') html+=bloqueSubsidios(d.ingresos);
+
   html+=bloquePoliticasTodos(d.tramite,d.es_vis);
   html+=`<div class="card"><h3 class="text-sm font-bold text-gray-800 mb-3">📋 Documentos Requeridos — ${pl}</h3><ul class="space-y-1">${(DOCS[d.perfil]||[]).map(doc=>`<li class="flex items-start gap-2 text-sm text-gray-700"><span class="text-green-500 shrink-0">✔</span>${doc}</li>`).join('')}</ul></div>`;
   html+=`</div>`;
 
   document.getElementById('resultado').innerHTML=html;
   document.getElementById('resultado').classList.remove('hidden');
-  document.getElementById('resultado').scrollIntoView({behavior:'smooth'});
 }
 
-// ── TABLA COMPARATIVA ──
+// ══════════════════════════════════════════════════
+// TABLA COMPARATIVA
+// ══════════════════════════════════════════════════
 function tablaComparativa(d,pp,pu){
   const todos=[...pp,...pu];
   if(!todos.length) return '';
   return `
   <div class="card">
-    <h3 class="text-sm font-bold text-gray-800 mb-1">📋 Comparativo Completo — Todos los Bancos Viables</h3>
-    <p class="text-xs text-gray-500 mb-3">Ordenados por tasa mínima. Todos los bancos listados son aliados de Colibran. La tasa definitiva la asigna el banco según el perfil de riesgo del cliente.</p>
+    <h3 class="text-sm font-bold text-gray-800 mb-1">📋 Comparativo Completo — Bancos Viables</h3>
+    <p class="text-xs text-gray-500 mb-3">Ordenados por tasa mínima. Todos son aliados de Colibran. La tasa definitiva la define el banco según el perfil de riesgo del titular.</p>
     <div class="overflow-x-auto">
     <table class="w-full text-xs">
-      <thead><tr class="bg-blue-900 text-white text-xs">
+      <thead><tr class="bg-blue-900 text-white">
         <th class="text-left p-2 rounded-tl-lg">Banco</th>
-        <th class="text-center p-2">Modalidad</th>
+        <th class="text-center p-2">Tipo</th>
         <th class="text-right p-2">Tasa mín E.A.</th>
         <th class="text-right p-2">Cuota/mes</th>
         <th class="text-right p-2">Monto banco</th>
@@ -648,28 +676,29 @@ function tablaComparativa(d,pp,pu){
         <tr class="${i===0?'bg-green-50 font-semibold':i%2===0?'bg-gray-50':''} border-b border-gray-100">
           <td class="p-2">${a.b.nombre}${i===0?' <span class="badge badge-green">✅ Mejor</span>':''}</td>
           <td class="text-center p-2"><span class="badge ${a.modo==='uvr'?'badge-purple':'badge-blue'}">${a.modo==='uvr'?'UVR':'Pesos'}</span></td>
-          <td class="text-right p-2 font-bold">${a.tasa_ea.toFixed(2)}%${a.spread_uvr?`<br><span class="text-purple-600 font-normal text-xs">UVR+${a.spread_uvr.toFixed(2)}%</span>`:''}</td>
-          <td class="text-right p-2">$${fmt(a.cuota)}</td>
-          <td class="text-right p-2">$${fmt(a.monto_b)}</td>
+          <td class="text-right p-2 font-bold">${a.tasa_ea.toFixed(2)}%${a.spread_uvr?`<br><span class="text-purple-600 font-normal">UVR+${a.spread_uvr.toFixed(2)}%</span>`:''}</td>
+          <td class="text-right p-2">$${cop(a.cuota)}</td>
+          <td class="text-right p-2">$${cop(a.monto_b)}</td>
           <td class="text-right p-2 ${a.dti>30?'text-amber-600':'text-green-600'}">${a.dti.toFixed(1)}%</td>
           <td class="text-right p-2">${a.pl_usar}a</td>
         </tr>`).join('')}
       </tbody>
     </table>
     </div>
-    <p class="text-xs text-gray-400 mt-2">* Cuotas con Amortización Francesa. UVR: cuota variable con IPC mensual.</p>
+    <p class="text-xs text-gray-400 mt-2">* Cuotas con Amortización Francesa. ${pu.length>0?'UVR: cuota inicial más baja pero variable con inflación mensual.':''}</p>
   </div>`;
 }
 
-// ── BLOQUE RECOMENDACIÓN ──
+// ══════════════════════════════════════════════════
+// BLOQUE RECOMENDACIÓN
+// ══════════════════════════════════════════════════
 function bloqueRecomendacion(d,p,modo){
-  const esUVR=modo==='uvr';
+  const eu=modo==='uvr';
   return `
-  <div class="card border-l-4 ${esUVR?'border-purple-400':'border-green-500'}">
+  <div class="card border-l-4 ${eu?'border-purple-400':'border-green-500'}">
     <div class="flex flex-wrap gap-2 items-center mb-2">
-      <span class="badge ${esUVR?'badge-purple':'badge-green'}">${esUVR?'📈 ALTERNATIVA UVR':'✅ MEJOR OPCIÓN EN PESOS'}</span>
+      <span class="badge ${eu?'badge-purple':'badge-green'}">${eu?'📈 ALTERNATIVA UVR':'✅ MEJOR OPCIÓN EN PESOS'}</span>
       <span class="badge badge-gold">⭐ Aliado Colibran</span>
-      <span class="badge ${esUVR?'badge-purple':'badge-blue'}">${esUVR?'UVR':'Pesos'}</span>
     </div>
     <h3 class="text-2xl font-extrabold text-blue-900 mt-1">${p.b.nombre}</h3>
     <div class="mt-3 bg-blue-50 border border-blue-100 rounded-xl p-3">
@@ -678,13 +707,13 @@ function bloqueRecomendacion(d,p,modo){
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3 text-center">
       <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">Tasa mín. E.A.</p><p class="font-bold text-blue-900 text-xl">${p.tasa_ea.toFixed(2)}%</p>${p.spread_uvr?`<p class="text-xs text-purple-600">UVR+${p.spread_uvr.toFixed(2)}%</p>`:''}</div>
-      <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">${d.tramite==='compra_cartera'?'Saldo':'LTV → Monto'}</p><p class="font-bold text-sm">${d.tramite==='compra_cartera'?'$'+fmt(d.valor):(p.ltv_pct+'% → $'+fmt(p.monto_b))}</p></div>
+      <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">${d.tramite==='compra_cartera'?'Monto financiado':'LTV → Monto'}</p><p class="font-bold text-sm">${d.tramite==='compra_cartera'?'$'+cop(p.monto_b):(p.ltv_pct+'% → $'+cop(p.monto_b))}</p></div>
       <div class="bg-gray-50 rounded-xl p-3"><p class="text-xs text-gray-500">Plazo</p><p class="font-bold">${p.pl_usar} años</p></div>
-      <div class="bg-green-50 rounded-xl p-3"><p class="text-xs text-gray-500">Cuota mensual</p><p class="font-bold text-green-800 text-xl">$${fmt(p.cuota)}</p><p class="text-xs text-gray-400">${esUVR?'Variable con IPC':'Fija todo el plazo'}</p></div>
+      <div class="bg-green-50 rounded-xl p-3"><p class="text-xs text-gray-500">Cuota mensual</p><p class="font-bold text-green-800 text-xl">$${cop(p.cuota)}</p><p class="text-xs text-gray-400">${eu?'Variable con IPC':'Fija todo el plazo'}</p></div>
     </div>
-    ${esUVR?`<div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 leading-relaxed"><strong>⚠️ ¿Por qué UVR?</strong> Este cliente no clasifica en Pesos porque la cuota supera el 40% de su ingreso real. En UVR la cuota inicial es más baja porque la tasa real (UVR+spread) es menor. <strong>Riesgo:</strong> La cuota puede subir mensualmente con la inflación. Se recomienda para perfiles con ingresos estables (empleados públicos, pensionados) que puedan absorber esa variación.</div>`:''}
+    ${eu?`<div class="mt-3 p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 leading-relaxed"><strong>⚠️ ¿Por qué UVR?</strong> Este cliente no clasifica en Pesos porque la cuota supera el 40% de su ingreso real. En UVR la tasa real es menor, por lo que la cuota inicial es más baja. <strong>Riesgo:</strong> La cuota varía mensualmente con la inflación (IPC). Recomendado para perfiles con ingresos estables que puedan absorber esa variación.</div>`:''}
     <p class="text-xs text-gray-400 bg-gray-50 rounded-lg p-2 mt-3">📌 ${p.b.nota}</p>
-    <a href="${p.b.url}" target="_blank" class="mt-2 inline-flex items-center gap-1 text-xs text-blue-700 hover:underline font-semibold">🔗 Ver política oficial →</a>
+    <a href="${p.b.url}" target="_blank" class="mt-2 inline-flex items-center gap-1 text-xs text-blue-700 hover:underline font-semibold">🔗 Ver política oficial del banco →</a>
     <details class="mt-3 border border-gray-100 rounded-xl overflow-hidden">
       <summary class="text-xs font-bold text-gray-600 bg-gray-50 px-3 py-2 hover:bg-gray-100 transition">📁 Formularios a radicar — ${p.b.nombre} (solo ejecutivo) ▼</summary>
       <ul class="px-4 py-3 space-y-1">${(p.b.forms||[]).map(f=>`<li class="text-xs text-gray-600 flex gap-2"><span class="text-blue-400">📄</span>${f}</li>`).join('')}</ul>
@@ -692,74 +721,118 @@ function bloqueRecomendacion(d,p,modo){
   </div>`;
 }
 
-// ── AHORRO COMPRA DE CARTERA ──
+// ══════════════════════════════════════════════════
+// AHORRO COMPRA DE CARTERA
+// ══════════════════════════════════════════════════
 function bloqueAhorro(d,p){
-  const ca=cuotaFija(d.valor,eaAmv(d.tasa_actual),d.plazo_restante);
-  const cn=p.cuota, ah=ca-cn, total=ah*d.plazo_restante;
+  // Calcular sobre el plazo solicitado (no el restante)
+  const pl_meses = d.plazo_input * 12;
+  const ca = cuotaFija(d.monto_input, eaAmv(d.tasa_actual), d.plazo_restante||pl_meses);
+  const cn = p.cuota;
+  const ah = ca - cn;
+  // Ahorro en el plazo solicitado
+  const meses_analisis = Math.min(d.plazo_restante||pl_meses, pl_meses);
+  const total = ah * meses_analisis;
   return `
   <div class="card border-l-4 ${total>0?'border-green-500':'border-amber-400'}">
     <h3 class="text-sm font-bold text-gray-800 mb-3">💰 Simulador de Ahorro — Compra de Cartera</h3>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-center mb-4">
-      <div class="bg-red-50 rounded-xl p-3"><p class="text-xs text-gray-500">Cuota actual (${d.tasa_actual}% E.A.)</p><p class="font-bold text-red-700 text-xl">$${fmt(ca)}</p></div>
-      <div class="bg-green-50 rounded-xl p-3"><p class="text-xs text-gray-500">Cuota nueva (${p.tasa_ea.toFixed(2)}%)</p><p class="font-bold text-green-700 text-xl">$${fmt(cn)}</p></div>
-      <div class="bg-blue-50 rounded-xl p-3"><p class="text-xs text-gray-500">Ahorro mensual</p><p class="font-bold text-blue-900 text-xl">$${fmt(ah)}</p></div>
+      <div class="bg-red-50 rounded-xl p-3"><p class="text-xs text-gray-500">Cuota actual (${d.tasa_actual}% E.A.)</p><p class="font-bold text-red-700 text-xl">$${cop(ca)}</p></div>
+      <div class="bg-green-50 rounded-xl p-3"><p class="text-xs text-gray-500">Cuota nueva (${p.tasa_ea.toFixed(2)}%)</p><p class="font-bold text-green-700 text-xl">$${cop(cn)}</p></div>
+      <div class="bg-blue-50 rounded-xl p-3"><p class="text-xs text-gray-500">Ahorro mensual</p><p class="font-bold text-blue-900 text-xl">$${cop(Math.max(0,ah))}</p></div>
     </div>
-    ${total>0?`<div class="bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl p-5 text-center"><p class="text-sm font-semibold mb-2">🏆 Con este traslado, Colibran te ayuda a ahorrar:</p><p class="text-4xl font-extrabold">$${fmt(total)}</p><p class="text-green-100 text-xs mt-1">en intereses durante los ${d.plazo_restante} meses restantes del crédito</p></div>`
-    :`<div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-800 text-sm">⚠️ Con la tasa actual el cliente ya tiene condiciones similares. El traslado no genera ahorro significativo. Evalúa otros beneficios como trámite digital o mejores condiciones de plazo.</div>`}
+    ${total>0?`
+    <div class="bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-xl p-5 text-center">
+      <p class="text-sm font-semibold mb-2">🏆 Con este traslado, Colibran te ayuda a ahorrar:</p>
+      <p class="text-4xl font-extrabold">$${cop(total)}</p>
+      <p class="text-green-100 text-xs mt-1">en intereses durante los ${meses_analisis} meses del plazo solicitado</p>
+    </div>`:`
+    <div class="bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-800 text-sm">
+      ⚠️ Con la tasa actual el cliente ya tiene condiciones similares. El traslado no genera ahorro significativo en este plazo. Evalúa otros beneficios como trámite digital o mejor plazo.
+    </div>`}
   </div>`;
 }
 
-// ── DESCARTADOS ──
+// ══════════════════════════════════════════════════
+// DESCARTADOS
+// ══════════════════════════════════════════════════
 function bloqueDescartados(desc){
   if(!desc.length) return '';
-  return `<div class="card"><details><summary class="text-sm font-bold text-gray-700">⛔ Bancos Descartados (${desc.length}) — ver motivos ▼</summary><div class="mt-3 space-y-2">${desc.map(x=>`<div class="bg-gray-50 border border-gray-100 rounded-xl p-3"><p class="font-semibold text-sm">${x.b.nombre}</p>${x.m.map(mo=>`<p class="text-xs text-red-400">• ${mo}</p>`).join('')}</div>`).join('')}</div></details></div>`;
+  // Deduplicar por nombre banco
+  const vistos=new Set(), unicos=[];
+  for(const x of desc){ if(!vistos.has(x.b.id)){vistos.add(x.b.id);unicos.push(x);}}
+  return `<div class="card"><details><summary class="text-sm font-bold text-gray-700">⛔ Bancos Descartados (${unicos.length}) — ver motivos ▼</summary><div class="mt-3 space-y-2">${unicos.map(x=>`<div class="bg-gray-50 border border-gray-100 rounded-xl p-3"><p class="font-semibold text-sm">${x.b.nombre}</p>${x.m.map(mo=>`<p class="text-xs text-red-400">• ${mo}</p>`).join('')}</div>`).join('')}</div></details></div>`;
 }
 
-// ── SUBSIDIOS ──
+// ══════════════════════════════════════════════════
+// SUBSIDIOS (solo compra vivienda nueva)
+// ══════════════════════════════════════════════════
 function bloqueSubsidios(ingresos){
-  const s=ingresos/SMLV;
+  const s = ingresos/SMLV;
   let c='';
-  if(s<=4){
-    c=`<p class="text-xs text-green-700 bg-green-50 rounded-lg p-2 mb-3">✅ Con ${s.toFixed(1)} SMLV el cliente puede acceder a subsidios de vivienda.</p>
+  if(s<=2){
+    c=`<p class="text-xs text-green-700 bg-green-50 rounded-lg p-2 mb-3">✅ Con ${s.toFixed(1)} SMLV el titular accede a <strong>todos los subsidios disponibles</strong>, incluyendo el subsidio concurrente.</p>
     <div class="space-y-2">
       <div class="border border-green-200 rounded-xl p-3 bg-green-50">
         <p class="font-semibold text-sm text-green-800">🏛️ Mi Casa Ya — Nacional (MinVivienda)</p>
-        <p class="text-xs text-gray-600 mt-1">Subsidio directo a la cuota inicial de hasta $30M para VIS. Se complementa con el crédito hipotecario. Aplica en primera vivienda, sin inmuebles a nombre. <a href="https://www.minvivienda.gov.co" target="_blank" class="text-blue-600 underline">minvivienda.gov.co →</a></p>
-      </div>
-      <div class="border border-blue-200 rounded-xl p-3 bg-blue-50">
-        <p class="font-semibold text-sm text-blue-800">🏙️ Subsidio Municipal / Distrital</p>
-        <p class="text-xs text-gray-600 mt-1"><strong>Bogotá:</strong> Caja de Vivienda Popular y Metrovivienda, hasta $20M adicionales. <strong>Medellín:</strong> Urbanismo Social. <strong>Cali:</strong> INVICALI. <strong>Barranquilla:</strong> EDUBAR. Consultar con la secretaría de vivienda del municipio.</p>
-      </div>
-      <div class="border border-amber-200 rounded-xl p-3 bg-amber-50">
-        <p class="font-semibold text-sm text-amber-800">🏢 Caja de Compensación Familiar</p>
-        <p class="text-xs text-gray-600 mt-1">Subsidio familiar de vivienda (SFV) de hasta $23.5M para afiliados a Compensar, Colsubsidio, Cafam, Comfenalco y demás. Tramitar directamente en la caja del empleador. Aplica para compra VIS nueva o usada.</p>
-      </div>
-      <div class="border border-purple-200 rounded-xl p-3 bg-purple-50">
-        <p class="font-semibold text-sm text-purple-800">💳 Cobertura de Tasa FRECH</p>
-        <p class="text-xs text-gray-600 mt-1">El Gobierno subsidia entre 2 y 5 puntos porcentuales de la tasa de interés durante los primeros 7 años del crédito VIS. Se aplica automáticamente al tomar el crédito en banco aliado del programa.</p>
+        <p class="text-xs text-gray-600 mt-1">Subsidio directo a la cuota inicial de hasta $30M para VIS en primera vivienda. <a href="https://www.minvivienda.gov.co" target="_blank" class="text-blue-600 underline">minvivienda.gov.co →</a></p>
       </div>
       <div class="border border-teal-200 rounded-xl p-3 bg-teal-50">
         <p class="font-semibold text-sm text-teal-800">🤝 Subsidio Concurrente</p>
-        <p class="text-xs text-gray-600 mt-1">El cliente puede <strong>combinar</strong> el subsidio nacional (Mi Casa Ya) + el de la caja de compensación + el municipal. Los tres son complementarios y pueden sumarse para cubrir una mayor parte de la cuota inicial. <strong>Este es el mayor beneficio que puede obtener un cliente VIS.</strong></p>
+        <p class="text-xs text-gray-600 mt-1">El titular puede <strong>combinar</strong> el subsidio nacional (Mi Casa Ya) + el de la caja de compensación + el municipal. Los tres son complementarios y pueden sumarse para cubrir una parte significativa de la cuota inicial. <strong>Este es el mayor beneficio disponible para ingresos hasta 2 SMLV.</strong></p>
+      </div>
+      <div class="border border-blue-200 rounded-xl p-3 bg-blue-50">
+        <p class="font-semibold text-sm text-blue-800">🏙️ Subsidio Municipal / Distrital</p>
+        <p class="text-xs text-gray-600 mt-1"><strong>Bogotá:</strong> Caja de Vivienda Popular / Metrovivienda. <strong>Medellín:</strong> Urbanismo Social. <strong>Cali:</strong> INVICALI. <strong>Barranquilla:</strong> EDUBAR. Hasta $20M adicionales. Consultar en la secretaría de vivienda del municipio.</p>
+      </div>
+      <div class="border border-amber-200 rounded-xl p-3 bg-amber-50">
+        <p class="font-semibold text-sm text-amber-800">🏢 Caja de Compensación Familiar</p>
+        <p class="text-xs text-gray-600 mt-1">SFV de hasta $23.5M para afiliados (Compensar, Colsubsidio, Cafam, Comfenalco, etc.). Tramitar con la caja del empleador.</p>
+      </div>
+      <div class="border border-purple-200 rounded-xl p-3 bg-purple-50">
+        <p class="font-semibold text-sm text-purple-800">💳 Cobertura de Tasa FRECH</p>
+        <p class="text-xs text-gray-600 mt-1">El Gobierno subsidia entre 2 y 5 puntos de la tasa durante los primeros 7 años del crédito VIS. Se aplica automáticamente en banco aliado del programa.</p>
+      </div>
+    </div>`;
+  } else if(s<=4){
+    c=`<p class="text-xs text-green-700 bg-green-50 rounded-lg p-2 mb-3">✅ Con ${s.toFixed(1)} SMLV el titular puede acceder a los subsidios principales de vivienda.</p>
+    <div class="space-y-2">
+      <div class="border border-green-200 rounded-xl p-3 bg-green-50">
+        <p class="font-semibold text-sm text-green-800">🏛️ Mi Casa Ya — Nacional (MinVivienda)</p>
+        <p class="text-xs text-gray-600 mt-1">Subsidio directo a la cuota inicial hasta $30M para VIS. <a href="https://www.minvivienda.gov.co" target="_blank" class="text-blue-600 underline">minvivienda.gov.co →</a></p>
+      </div>
+      <div class="border border-blue-200 rounded-xl p-3 bg-blue-50">
+        <p class="font-semibold text-sm text-blue-800">🏙️ Subsidio Municipal / Distrital</p>
+        <p class="text-xs text-gray-600 mt-1">Variable según ciudad. Consultar en la secretaría de vivienda del municipio correspondiente.</p>
+      </div>
+      <div class="border border-amber-200 rounded-xl p-3 bg-amber-50">
+        <p class="font-semibold text-sm text-amber-800">🏢 Caja de Compensación Familiar</p>
+        <p class="text-xs text-gray-600 mt-1">SFV de hasta $23.5M para afiliados. Tramitar con la caja del empleador.</p>
+      </div>
+      <div class="border border-purple-200 rounded-xl p-3 bg-purple-50">
+        <p class="font-semibold text-sm text-purple-800">💳 Cobertura de Tasa FRECH</p>
+        <p class="text-xs text-gray-600 mt-1">Subsidio de tasa de 2–5 puntos durante los primeros 7 años del crédito VIS. Se aplica automáticamente en banco aliado.</p>
       </div>
     </div>`;
   } else {
-    c=`<p class="text-xs text-blue-700 bg-blue-50 rounded-lg p-2 mb-3">ℹ️ Con ${s.toFixed(1)} SMLV no aplican subsidios directos, pero hay beneficios importantes:</p>
+    c=`<p class="text-xs text-blue-700 bg-blue-50 rounded-lg p-2 mb-3">ℹ️ Con ${s.toFixed(1)} SMLV no aplican subsidios directos de vivienda, pero el titular puede aprovechar:</p>
     <div class="space-y-2">
       <div class="border border-blue-200 rounded-xl p-3 bg-blue-50">
         <p class="font-semibold text-sm text-blue-800">💰 Cuenta AFC — Beneficio Tributario</p>
-        <p class="text-xs text-gray-600 mt-1">Ahorro programado para vivienda en Cuenta AFC. Hasta el 30% del ingreso puede ser exento de retención en la fuente si se destina a adquisición de vivienda. Disponible en cualquier banco o fondo de pensiones.</p>
+        <p class="text-xs text-gray-600 mt-1">Hasta el 30% del ingreso exento de retención en la fuente si se destina a adquisición de vivienda a través de Cuenta AFC.</p>
       </div>
       <div class="border border-amber-200 rounded-xl p-3 bg-amber-50">
         <p class="font-semibold text-sm text-amber-800">🏢 Subsidio de Caja de Compensación (No VIS)</p>
-        <p class="text-xs text-gray-600 mt-1">Algunas cajas ofrecen apoyo para vivienda No VIS en menor cuantía. Consultar específicamente en Compensar, Colsubsidio o la caja del empleador según el municipio.</p>
+        <p class="text-xs text-gray-600 mt-1">Algunas cajas ofrecen apoyo para vivienda No VIS. Consultar con Compensar, Colsubsidio o la caja del empleador.</p>
       </div>
     </div>`;
   }
-  return `<div class="card"><h3 class="text-sm font-bold text-gray-800 mb-3">🏠 Subsidios y Beneficios de Vivienda</h3>${c}<p class="text-xs text-gray-400 mt-3">* Montos y condiciones sujetos a disponibilidad presupuestal 2026. El ejecutivo debe validar vigencia de cada programa al momento del trámite.</p></div>`;
+  return `<div class="card"><h3 class="text-sm font-bold text-gray-800 mb-3">🏠 Subsidios y Beneficios — Vivienda Nueva</h3>${c}<p class="text-xs text-gray-400 mt-3">* Montos y condiciones sujetos a disponibilidad presupuestal 2026. El titular debe validar la vigencia de cada programa al momento del trámite.</p></div>`;
 }
 
-// ── POLÍTICAS TODOS LOS BANCOS ──
+// ══════════════════════════════════════════════════
+// POLÍTICAS TODOS LOS BANCOS
+// ══════════════════════════════════════════════════
 function bloquePoliticasTodos(tramite,es_vis){
   const tv=es_vis?'vis':'novis';
   const tk=tramite==='leasing'?'leasing':tramite==='compra_cartera'?'cartera':'hip';
@@ -771,8 +844,8 @@ function bloquePoliticasTodos(tramite,es_vis){
         ${BANCOS.map(b=>{
           const tp=T[tk+'_pesos']?.[b.id]?.[tv];
           const tu=T[tk+'_uvr']?.[b.id]?.[tv];
-          const lk=(es_vis?'vis':'novis')+'_'+(tramite==='leasing'?'leasing':'compra');
-          const ltv=b.ltv[lk];
+          const lk=(es_vis?'vis':'novis')+'_'+(tramite==='leasing'?'l':'c');
+          const ltv=tramite!=='compra_cartera'?b.ltv[lk]:null;
           return `
           <div class="border border-gray-200 rounded-xl overflow-hidden">
             <div class="bg-gray-50 px-4 py-2 flex justify-between flex-wrap gap-2 items-start">
@@ -780,9 +853,9 @@ function bloquePoliticasTodos(tramite,es_vis){
               <a href="${b.url}" target="_blank" class="text-xs text-blue-600 hover:underline font-semibold shrink-0">🔗 Política →</a>
             </div>
             <div class="px-4 py-3 grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-              <div><p class="text-gray-400">Tasa Pesos mín.</p><p class="font-bold">${tp!==null&&tp!==undefined?tp.toFixed(2)+'% E.A.':'N/A'}</p></div>
-              <div><p class="text-gray-400">Tasa UVR spread</p><p class="font-bold">${tu!==null&&tu!==undefined?'UVR+'+tu.toFixed(2)+'%':'N/A'}</p></div>
-              <div><p class="text-gray-400">LTV</p><p class="font-bold">${ltv?ltv+'%':'N/A'}</p></div>
+              <div><p class="text-gray-400">Tasa Pesos mín.</p><p class="font-bold">${tp!=null?tp.toFixed(2)+'% E.A.':'N/A'}</p></div>
+              <div><p class="text-gray-400">Tasa UVR spread</p><p class="font-bold">${tu!=null?'UVR+'+tu.toFixed(2)+'%':'N/A'}</p></div>
+              <div><p class="text-gray-400">LTV${tramite==='compra_cartera'?' (cartera)':''}</p><p class="font-bold">${tramite==='compra_cartera'?'80% valor comercial':ltv?ltv+'%':'N/A'}</p></div>
               <div><p class="text-gray-400">Plazo máx.</p><p class="font-bold">${b.plazo_max[tramite]?b.plazo_max[tramite]+' años':'N/A'}</p></div>
             </div>
             <details class="border-t border-gray-100">
@@ -796,22 +869,48 @@ function bloquePoliticasTodos(tramite,es_vis){
   </div>`;
 }
 
-// ════════════════════════════════════════════════
-// PASO 2: ACEPTAR / RECHAZAR OFERTA
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
+// PASO 2: ACEPTAR / RECHAZAR
+// ══════════════════════════════════════════════════
 function aceptarOferta(){
-  const tipo_doc=document.getElementById('f_tipo_doc').value;
-  const doc=document.getElementById('f_doc').value;
-  const celular=document.getElementById('f_celular').value;
+  const tipo_doc = document.getElementById('f_tipo_doc').value;
+  const doc      = document.getElementById('f_doc').value.trim();
+  const celular  = document.getElementById('f_celular').value.trim();
   if(!tipo_doc||!doc||!celular){ alert('Por favor completa tipo de documento, número y celular.'); return; }
-  const c=window._ctx||{};
-  exportarCSV({...c, tipo_doc, doc, celular, estado:'ACEPTA OFERTA'});
+
+  const c = window._ctx||{};
+  const payload = {...c, tipo_doc, doc, celular, estado:'ACEPTA OFERTA'};
+
+  // Enviar a Google Sheets
+  if(SHEETS_URL && SHEETS_URL !== 'PEGA_AQUI_LA_URL_DE_TU_APPS_SCRIPT'){
+    fetch(SHEETS_URL, {
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify(payload)
+    }).catch(()=>{});
+    mostrarConfirmacion(c, celular, true);
+  } else {
+    // Modo offline: descargar CSV
+    const h=['Fecha','Nombre','Tipo Doc','Num Doc','Celular','Empresa','Ciudad','Perfil','Trámite','Ingresos','Valor Inmueble','Monto','Plazo','Banco Origen','Estado'];
+    const r=[c.fecha,c.nombre,tipo_doc,doc,celular,c.empresa,c.ciudad,c.perfil,c.tramite,c.ingresos,c.valor,c.monto_input,c.plazo_input,c.banco_origen||'','ACEPTA OFERTA'];
+    const csv='sep=,\n'+h.join(',')+'\n'+r.map(v=>`"${(v||'').toString().replace(/"/g,'""')}"`).join(',');
+    const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a'); a.href=url;
+    a.download=`colibran_${(c.nombre||'cliente').replace(/\s+/g,'_')}_${Date.now()}.csv`;
+    a.click(); URL.revokeObjectURL(url);
+    mostrarConfirmacion(c, celular, false);
+  }
+}
+
+function mostrarConfirmacion(c, celular, sheets){
   document.getElementById('paso2').innerHTML=`
   <div class="p-4 bg-green-50 border border-green-300 rounded-xl text-center fadein">
     <p class="text-2xl mb-2">✅</p>
-    <p class="font-bold text-green-800">¡Datos guardados exitosamente!</p>
-    <p class="text-sm text-green-700 mt-1">El cliente aceptó la oferta. Los datos fueron registrados en el CSV.</p>
-    <a href="https://wa.me/573004383623?text=Hola%2C%20tengo%20un%20cliente%20interesado%20en%20crédito%20de%20vivienda.%20Nombre:%20${encodeURIComponent(c.nombre||'')}%20-%20Celular:%20${encodeURIComponent(celular)}"
+    <p class="font-bold text-green-800">¡Datos registrados exitosamente!</p>
+    <p class="text-sm text-green-700 mt-1">${sheets?'Datos enviados a la base de datos Colibran.':'Datos guardados en CSV (configura Google Sheets para consolidación automática).'}</p>
+    <a href="https://wa.me/573004383623?text=Hola%2C%20tengo%20un%20cliente%20interesado%20en%20crédito%20de%20vivienda.%20Nombre:%20${encodeURIComponent(c.nombre||'')}%20-%20Celular:%20${encodeURIComponent(celular)}%20-%20Trámite:%20${encodeURIComponent(c.tramite||'')}"
        target="_blank"
        class="mt-3 inline-flex items-center gap-2 bg-green-600 text-white font-bold px-4 py-2 rounded-xl text-sm hover:bg-green-500 transition">
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -824,43 +923,30 @@ function rechazarOferta(){
   document.getElementById('paso2').innerHTML=`
   <div class="p-4 bg-gray-50 border border-gray-200 rounded-xl text-center fadein">
     <p class="text-2xl mb-2">📋</p>
-    <p class="font-semibold text-gray-700">El cliente decidió no continuar.</p>
-    <p class="text-sm text-gray-500 mt-1">No se registraron datos personales. Puedes hacer una nueva consulta.</p>
+    <p class="font-semibold text-gray-700">El titular decidió no continuar.</p>
+    <p class="text-sm text-gray-500 mt-1">No se registraron datos personales.</p>
   </div>`;
 }
 
-// ════════════════════════════════════════════════
-// EXPORTAR CSV
-// ════════════════════════════════════════════════
-function exportarCSV(c){
-  const h=['Fecha','Nombre','Tipo Doc','Num Doc','Celular','Empresa','Ciudad','Perfil','Trámite','Ingresos','Valor Inmueble','Monto Financiar','Plazo','Banco Cartera Origen','Estado'];
-  const r=[c.fecha,c.nombre,c.tipo_doc,c.doc,c.celular,c.empresa,c.ciudad,c.perfil,c.tramite,c.ingresos,c.valor,c.monto_input,c.plazo_input,c.banco_origen||'',c.estado];
-  const csv='sep=,\n'+h.join(',')+'\n'+r.map(v=>`"${(v||'').toString().replace(/"/g,'""')}"`).join(',');
-  const blob=new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'});
-  const url=URL.createObjectURL(blob);
-  const a=document.createElement('a');
-  a.href=url; a.download=`colibran_${(c.nombre||'cliente').replace(/\s+/g,'_')}_${Date.now()}.csv`;
-  a.click(); URL.revokeObjectURL(url);
-}
-
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 // HELPERS
-// ════════════════════════════════════════════════
+// ══════════════════════════════════════════════════
 function justif(d,p,modo){
   const eu=modo==='uvr';
   const parts=[
-    `<strong>${p.b.nombre}</strong> ofrece la tasa mínima más competitiva en ${eu?'UVR':'Pesos'}: <strong>${p.tasa_ea.toFixed(2)}% E.A.</strong>${p.spread_uvr?` (UVR+${p.spread_uvr.toFixed(2)}%)`:''}${!eu?`, lo que equivale a una cuota fija de <strong>$${fmt(p.cuota)}</strong> durante todo el plazo`:''}`,
+    `<strong>${p.b.nombre}</strong> ofrece la tasa mínima más competitiva en ${eu?'UVR':'Pesos'}: <strong>${p.tasa_ea.toFixed(2)}% E.A.</strong>${p.spread_uvr?` (UVR+${p.spread_uvr.toFixed(2)}%)`:''}${!eu?`, equivalente a una cuota fija de <strong>$${cop(p.cuota)}</strong> durante todo el plazo`:''}`
   ];
-  if(d.factor<1) parts.push(`el banco reconoce el ${d.factor*100}% del ingreso (ingreso real: <strong>$${fmt(d.ing_real)}</strong>)`);
-  if(d.tramite!=='compra_cartera') parts.push(`financia hasta el <strong>${p.ltv_pct}%</strong> del valor del inmueble (<strong>$${fmt(p.monto_b)}</strong>)`);
-  parts.push(`DTI de vivienda: <strong>${p.dti.toFixed(1)}%</strong> (dentro del límite legal del 40%)`);
-  parts.push(`plazo disponible <strong>${p.pl_usar} años</strong> compatible con la edad del cliente`);
+  if(d.factor<1) parts.push(`el banco reconoce el ${d.factor*100}% del ingreso → ingreso real <strong>$${cop(d.ing_real)}</strong>`);
+  if(d.tramite!=='compra_cartera') parts.push(`financia hasta el <strong>${p.ltv_pct}%</strong> del valor (<strong>$${cop(p.monto_b)}</strong>)`);
+  else parts.push(`financia el monto solicitado de <strong>$${cop(p.monto_b)}</strong> (dentro del 80% del valor comercial)`);
+  parts.push(`DTI de vivienda: <strong>${p.dti.toFixed(1)}%</strong> dentro del límite legal del 40%`);
+  parts.push(`plazo de <strong>${p.pl_usar} años</strong> compatible con la edad del titular`);
   parts.push(`banco aliado Colibran — facilita radicación y seguimiento`);
   return parts.join('; ')+'.';
 }
-function eaAmv(ea){return Math.pow(1+ea/100,1/12)-1;}
-function cuotaFija(P,tm,n){if(!P||!tm||!n)return 0;return P*(tm*Math.pow(1+tm,n))/(Math.pow(1+tm,n)-1);}
-function fmt(n){return Math.round(n||0).toLocaleString('es-CO');}
+function eaAmv(ea){ return Math.pow(1+ea/100,1/12)-1; }
+function cuotaFija(P,tm,n){ if(!P||!tm||!n)return 0; return P*(tm*Math.pow(1+tm,n))/(Math.pow(1+tm,n)-1); }
+function cop(n){ return Math.round(n||0).toLocaleString('es-CO'); }
 function mostrarRechazo(titulo,msg){
   document.getElementById('resultado').innerHTML=`<div class="fadein card border-l-4 border-red-600"><h3 class="font-bold text-red-700 text-xl mb-3">🚫 ${titulo}</h3><p class="text-gray-700 text-sm leading-relaxed">${msg}</p></div>`;
   document.getElementById('resultado').classList.remove('hidden');
